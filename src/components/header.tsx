@@ -72,7 +72,7 @@ export default function Header() {
 
           {/* Contact Button */}
           <Button className="hidden lg:block bg-gradient-to-r from-orange-600 to-red-700 hover:from-orange-700 hover:to-red-800 text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105">
-            Contact Us
+            <Link href={"/contact-us"}>Contact Us</Link>
           </Button>
 
           {/* Mobile Menu */}
