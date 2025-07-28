@@ -1,0 +1,181 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+
+export default function Testimonials() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const testimonials = [
+    {
+      name: "Alex Thompson",
+      role: "CEO, TechStart Inc.",
+      avatar: "/placeholder.svg?height=80&width=80",
+      content:
+        "Brentwood Global transformed our digital presence completely. Their AI solutions increased our efficiency by 300% and their team's expertise is unmatched.",
+      rating: 5,
+    },
+    {
+      name: "Maria Garcia",
+      role: "CTO, InnovateCorp",
+      avatar: "/placeholder.svg?height=80&width=80",
+      content:
+        "The blockchain solution they developed for us revolutionized our supply chain. Professional, innovative, and delivered on time. Highly recommended!",
+      rating: 5,
+    },
+    {
+      name: "John Smith",
+      role: "Founder, StartupXYZ",
+      avatar: "/placeholder.svg?height=80&width=80",
+      content:
+        "From concept to deployment, Brentwood Global exceeded our expectations. Their web development team created exactly what we envisioned and more.",
+      rating: 5,
+    },
+    {
+      name: "Sarah Lee",
+      role: "Director, GlobalTech",
+      avatar: "/placeholder.svg?height=80&width=80",
+      content:
+        "Outstanding mobile app development! The user experience is seamless and the performance is exceptional. Our users love the new app.",
+      rating: 5,
+    },
+  ];
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            What Our{" "}
+            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+              Clients Say
+            </span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Don't just take our word for it. Here's what our satisfied clients
+            have to say about our services.
+          </p>
+        </motion.div>
+
+        <div className="relative max-w-4xl mx-auto">
+          {/* Testimonial Slider */}
+          <div className="overflow-hidden rounded-3xl">
+            <motion.div
+              animate={{ x: `-${currentSlide * 100}%` }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="flex"
+            >
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <Card className="bg-gradient-to-br from-gray-50 to-white border-0 shadow-2xl">
+                    <CardContent className="p-12 text-center">
+                      {/* Stars */}
+                      <div className="flex justify-center mb-6">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-6 h-6 text-orange-500 fill-current"
+                          />
+                        ))}
+                      </div>
+
+                      {/* Quote */}
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 italic"
+                      >
+                        "{testimonial.content}"
+                      </motion.p>
+
+                      {/* Author */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="flex items-center justify-center space-x-4"
+                      >
+                        <img
+                          src={testimonial.avatar || "/placeholder.svg"}
+                          alt={testimonial.name}
+                          className="w-16 h-16 rounded-full object-cover border-4 border-orange-200"
+                        />
+                        <div className="text-left">
+                          <h4 className="text-lg font-bold text-gray-900">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-orange-600 font-medium">
+                            {testimonial.role}
+                          </p>
+                        </div>
+                      </motion.div>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-700" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-700" />
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide
+                    ? "bg-orange-500 scale-125"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
