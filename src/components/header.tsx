@@ -3,13 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { Menu } from "lucide-react";
+// import { ChevronDown } from "lucide-react";
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Header() {
@@ -53,7 +54,7 @@ export default function Header() {
               ))}
 
               {/* Language Selector */}
-              <DropdownMenu>
+              {/* <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-purple-400 transition-colors">
                   <span className="text-lg">🇺🇸</span>
                   <ChevronDown className="w-4 h-4" />
@@ -66,7 +67,7 @@ export default function Header() {
                     <span className="mr-2">🇪🇸</span> Spanish
                   </DropdownMenuItem>
                 </DropdownMenuContent>
-              </DropdownMenu>
+              </DropdownMenu> */}
             </div>
           </nav>
 
