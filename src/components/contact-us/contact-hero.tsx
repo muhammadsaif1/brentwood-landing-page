@@ -56,8 +56,8 @@ export default function ContactHero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
           >
-            Let's build something incredible together. Whether you have
-            questions or ideas, we're just a message away.
+            Let&apos;s build something incredible together. Whether you have
+            questions or ideas, we&apos;re just a message away.
           </motion.p>
 
           <motion.div

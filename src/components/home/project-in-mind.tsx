@@ -52,7 +52,7 @@ export default function ProjectInMind() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            Let's turn your vision into reality. Our team is ready to bring
+            Let&apos;s turn your vision into reality. Our team is ready to bring
             innovation and expertise to your next big idea.
           </motion.p>
 

@@ -102,8 +102,8 @@ export default function ContactForm() {
                       Message Sent!
                     </h3>
                     <p className="text-gray-600 mb-4">
-                      Thank you for reaching out. We'll get back to you within
-                      24 hours.
+                      Thank you for reaching out. We&apos;ll get back to you
+                      within 24 hours.
                     </p>
                     <Button
                       onClick={resetForm}
@@ -254,7 +254,7 @@ export default function ContactForm() {
                       className="space-y-4"
                     >
                       <Label className="text-gray-700 font-medium">
-                        Services You're Interested In{" "}
+                        Services You&apos;re Interested In{" "}
                         <span className="text-gray-400">
                           (Select all that apply)
                         </span>
@@ -403,7 +403,7 @@ export default function ContactForm() {
                 </motion.div>
 
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-                  Let's Collaborate
+                  Let&apos;s Collaborate
                 </h3>
                 <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
                   Ready to transform your ideas into reality? Our team of

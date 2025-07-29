@@ -99,8 +99,8 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12"
           >
-            Let's collaborate to create impactful digital experiences that drive
-            your business forward.
+            Let&apos;s collaborate to create impactful digital experiences that
+            drive your business forward.
           </motion.p>
 
           <motion.div

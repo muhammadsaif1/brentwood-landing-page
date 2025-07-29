@@ -40,7 +40,7 @@ export default function DecipheringAI() {
             viewport={{ once: true }}
             className="text-xl text-gray-600 leading-relaxed mb-8"
           >
-            At Brentwood Global, we're at the forefront of AI innovation,
+            At Brentwood Global, we&apos;re at the forefront of AI innovation,
             transforming complex algorithms into practical solutions that drive
             business growth. Our AI expertise spans machine learning, natural
             language processing, computer vision, and predictive analytics.

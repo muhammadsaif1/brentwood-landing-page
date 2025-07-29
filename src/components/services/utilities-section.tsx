@@ -48,7 +48,7 @@ export default function UtilitiesSection() {
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Beyond core development, we provide essential utility services that
             keep your digital infrastructure running smoothly and efficiently.
-            From maintenance to optimization, we've got you covered.
+            From maintenance to optimization, we&apos;ve got you covered.
           </p>
         </motion.div>
 

@@ -254,8 +254,8 @@ export default function WebMobileDevelopment() {
               Need a Custom Solution?
             </h3>
             <p className="text-white/90 mb-6">
-              Every project is unique. Let's discuss your specific requirements
-              and create a tailored development plan.
+              Every project is unique. Let&apos;s discuss your specific
+              requirements and create a tailored development plan.
             </p>
             <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
               Schedule Consultation

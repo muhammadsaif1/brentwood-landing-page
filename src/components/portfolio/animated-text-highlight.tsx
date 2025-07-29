@@ -40,7 +40,7 @@ export default function AnimatedTextHighlight() {
           className="text-center max-w-5xl mx-auto"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-            At Brentwood, we don't just build software — we{" "}
+            At Brentwood, we don&apos;t just build software — we{" "}
             <span className="relative inline-block">
               <motion.span
                 initial={{ backgroundSize: "0% 100%" }}

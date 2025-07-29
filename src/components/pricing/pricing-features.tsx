@@ -60,7 +60,7 @@ export default function PricingFeatures() {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-bold text-gray-900"
             >
-              What's{" "}
+              What&apos;s{" "}
               <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
                 Included
               </span>

@@ -32,7 +32,7 @@ export default function MessageBoxBanner() {
               viewport={{ once: true }}
               className="text-6xl md:text-8xl text-orange-500/20 mb-6 text-center"
             >
-              "
+              &apos;
             </motion.div>
 
             {/* Message Content */}
@@ -46,7 +46,7 @@ export default function MessageBoxBanner() {
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                 Your success is our mission —{" "}
                 <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
-                  let's build the future together
+                  let&apos;s build the future together
                 </span>
               </h3>
 

@@ -336,8 +336,8 @@ export default function IoTPage() {
             </h2>
 
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's build intelligent IoT solutions that transform your business
-              and create meaningful connections
+              Let&apos;s build intelligent IoT solutions that transform your
+              business and create meaningful connections
             </p>
 
             <motion.button

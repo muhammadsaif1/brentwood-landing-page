@@ -64,7 +64,7 @@ export default function AIProjectsShowcase() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we're transforming industries with cutting-edge AI
+            Discover how we&apos;re transforming industries with cutting-edge AI
             solutions
           </p>
         </motion.div>

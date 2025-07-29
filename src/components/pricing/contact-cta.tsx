@@ -109,8 +109,8 @@ export default function ContactCTA() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-12"
           >
-            Choose your preferred way to get in touch and let's discuss how we
-            can bring your vision to life.
+            Choose your preferred way to get in touch and let&apos;s discuss how
+            we can bring your vision to life.
           </motion.p>
         </motion.div>
 

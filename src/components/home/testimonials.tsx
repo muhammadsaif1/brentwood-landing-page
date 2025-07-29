@@ -78,8 +78,8 @@ export default function Testimonials() {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients
-            have to say about our services.
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied
+            clients have to say about our services.
           </p>
         </motion.div>
 
@@ -113,7 +113,7 @@ export default function Testimonials() {
                         viewport={{ once: true }}
                         className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 italic"
                       >
-                        "{testimonial.content}"
+                        &quot{testimonial.content}&quot
                       </motion.p>
 
                       {/* Author */}

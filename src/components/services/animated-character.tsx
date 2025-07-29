@@ -35,10 +35,10 @@ export default function AnimatedCharacter() {
               viewport={{ once: true }}
               className="text-lg text-gray-600 leading-relaxed"
             >
-              At Brentwood Global, we don't just build technology – we craft
-              digital experiences that transform businesses and empower growth.
-              Our team of experts combines innovation with proven methodologies
-              to deliver solutions that exceed expectations.
+              At Brentwood Global, we don&apos;t just build technology – we
+              craft digital experiences that transform businesses and empower
+              growth. Our team of experts combines innovation with proven
+              methodologies to deliver solutions that exceed expectations.
             </motion.p>
 
             <motion.p
@@ -48,9 +48,9 @@ export default function AnimatedCharacter() {
               viewport={{ once: true }}
               className="text-lg text-gray-600 leading-relaxed"
             >
-              From startups to enterprise organizations, we've helped hundreds
-              of clients navigate their digital transformation journey with
-              confidence and success.
+              From startups to enterprise organizations, we&apos;ve helped
+              hundreds of clients navigate their digital transformation journey
+              with confidence and success.
             </motion.p>
 
             <motion.div

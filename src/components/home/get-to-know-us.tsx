@@ -38,10 +38,11 @@ export default function GetToKnowUs() {
               viewport={{ once: true }}
               className="text-lg text-gray-600 leading-relaxed"
             >
-              At Brentwood Global, we're more than just a service agency – we're
-              your strategic partners in digital transformation. With a passion
-              for innovation and a commitment to excellence, we've been helping
-              businesses across the globe turn their boldest ideas into reality.
+              At Brentwood Global, we&apos;re more than just a service agency –
+              we&apos;re your strategic partners in digital transformation. With
+              a passion for innovation and a commitment to excellence,
+              we&apos;ve been helping businesses across the globe turn their
+              boldest ideas into reality.
             </motion.p>
 
             <motion.p

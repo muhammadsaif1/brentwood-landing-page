@@ -103,7 +103,7 @@ export default function PartnerCTA() {
                 />
 
                 <span className="relative z-10 group-hover:text-orange-700 transition-colors duration-300">
-                  Let's Collaborate
+                  Let&apos;s Collaborate
                 </span>
 
                 {/* Button Glow */}

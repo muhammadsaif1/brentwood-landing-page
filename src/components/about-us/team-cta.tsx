@@ -116,8 +116,8 @@ export function TeamCTA() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed"
           >
-            Let's start a conversation and build something great together. Our
-            team is ready to turn your vision into reality.
+            Let&apos;s start a conversation and build something great together.
+            Our team is ready to turn your vision into reality.
           </motion.p>
 
           {/* CTA Button */}

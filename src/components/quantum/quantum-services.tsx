@@ -140,7 +140,7 @@ export default function QuantumServices() {
                   >
                     Our quantum research team leverages cutting-edge quantum
                     computing principles to deliver solutions that push the
-                    boundaries of what's possible in modern technology.
+                    boundaries of what&apos;s possible in modern technology.
                   </motion.p>
 
                   <motion.div

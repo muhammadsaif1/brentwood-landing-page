@@ -17,7 +17,8 @@ export default function LocationMap() {
             Visit Us
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Located in the heart of Islamabad, we're always ready to welcome you
+            Located in the heart of Islamabad, we&apos;re always ready to
+            welcome you
           </p>
         </motion.div>
 
@@ -59,7 +60,7 @@ export default function LocationMap() {
                   transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                   className="w-2 h-2 bg-green-500 rounded-full"
                 />
-                <span className="text-xs text-gray-600">We're here!</span>
+                <span className="text-xs text-gray-600">We&apos;re here!</span>
               </div>
             </motion.div>
           </div>
