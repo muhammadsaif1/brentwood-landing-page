@@ -21,7 +21,6 @@ export default function Header() {
     { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Pricing", href: "/pricing" },
-    { name: "QUANTUM RND", href: "/quantum" },
     { name: "IOT", href: "/iot" },
   ];
 
