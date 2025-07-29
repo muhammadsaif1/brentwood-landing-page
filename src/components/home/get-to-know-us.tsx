@@ -79,7 +79,7 @@ export default function GetToKnowUs() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative overflow-hidden"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
               {/* Video Placeholder with Animation */}
