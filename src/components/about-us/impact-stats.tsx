@@ -89,7 +89,7 @@ export function ImpactStats() {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
         <motion.div
           className="h-full w-20 bg-gradient-to-r from-orange-400 to-orange-600"
-          animate={{ x: [-100, window.innerWidth + 100] }}
+          animate={{ x: [-100, 1200] }}
           transition={{
             duration: 3,
             repeat: Number.POSITIVE_INFINITY,
@@ -100,7 +100,7 @@ export function ImpactStats() {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
         <motion.div
           className="h-full w-20 bg-gradient-to-r from-orange-400 to-orange-600"
-          animate={{ x: [window.innerWidth + 100, -100] }}
+          animate={{ x: [1200, -100] }}
           transition={{
             duration: 3,
             repeat: Number.POSITIVE_INFINITY,
