@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section className="py-32 relative overflow-hidden bg-background">
+    <section className="py-32 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <motion.div
