@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export default function UtilitiesSection() {
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Top Animated Line */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{
@@ -19,7 +19,7 @@ export default function UtilitiesSection() {
       </div>
 
       {/* Bottom Animated Line */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["100%", "-100%"] }}
           transition={{
@@ -39,13 +39,13 @@ export default function UtilitiesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Utility{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Services
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Beyond core development, we provide essential utility services that
             keep your digital infrastructure running smoothly and efficiently.
             From maintenance to optimization, we&apos;ve got you covered.
@@ -97,7 +97,7 @@ export default function UtilitiesSection() {
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
+              className="bg-background p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
             >
               <motion.div
                 animate={{
@@ -113,10 +113,10 @@ export default function UtilitiesSection() {
               >
                 {utility.icon}
               </motion.div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
+              <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-[#00bfff] transition-colors">
                 {utility.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {utility.description}
               </p>
 
@@ -125,7 +125,7 @@ export default function UtilitiesSection() {
                 initial={{ width: 0 }}
                 whileHover={{ width: "100%" }}
                 transition={{ duration: 0.3 }}
-                className="h-1 bg-gradient-to-r from-orange-500 to-red-600 mt-6 rounded-full"
+                className="h-1 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] mt-6 rounded-full"
               />
             </motion.div>
           ))}

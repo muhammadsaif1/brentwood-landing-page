@@ -19,14 +19,14 @@ export function MissionVision() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-600/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/10 via-[#00bfff]/10 to-[#007bff]/10" />
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-orange-500 rounded-full"
+            className="absolute w-1 h-1 bg-[#00bfff] rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -60,10 +60,10 @@ export function MissionVision() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"
+                className="text-4xl md:text-5xl font-bold text-foreground mb-8"
               >
                 Our Mission &{" "}
-                <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
                   Vision
                 </span>
               </motion.h2>
@@ -77,8 +77,10 @@ export function MissionVision() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Mission</h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Mission
+              </h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 To empower organizations by building reliable, scalable, and
                 innovative digital products that drive growth and create lasting
                 value.
@@ -94,8 +96,8 @@ export function MissionVision() {
                     viewport={{ once: true }}
                     className="flex items-center space-x-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                    <span className="text-gray-700">{point}</span>
+                    <CheckCircle className="w-5 h-5 text-[#00bfff] flex-shrink-0" />
+                    <span className="text-muted-foreground">{point}</span>
                   </motion.div>
                 ))}
               </div>
@@ -109,8 +111,10 @@ export function MissionVision() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Vision</h3>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Vision
+              </h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 To become a global force in tech by fostering lasting
                 partnerships and pushing the boundaries of possibility in
                 digital innovation.
@@ -126,8 +130,8 @@ export function MissionVision() {
                     viewport={{ once: true }}
                     className="flex items-center space-x-3"
                   >
-                    <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                    <span className="text-gray-700">{point}</span>
+                    <CheckCircle className="w-5 h-5 text-[#00bfff] flex-shrink-0" />
+                    <span className="text-muted-foreground">{point}</span>
                   </motion.div>
                 ))}
               </div>
@@ -154,16 +158,13 @@ export function MissionVision() {
                   alt="Tech Innovation - Replaceable Image"
                   className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
                 {/* Floating Elements */}
                 <div className="absolute inset-0 overflow-hidden">
                   {[...Array(8)].map((_, i) => (
                     <motion.div
                       key={i}
-                      className="absolute w-3 h-3 bg-orange-500/60 rounded-full"
+                      className="absolute w-3 h-3 bg-[#00bfff]/60 rounded-full"
                       style={{
                         left: `${20 + Math.random() * 60}%`,
                         top: `${20 + Math.random() * 60}%`,
@@ -190,7 +191,7 @@ export function MissionVision() {
                   repeat: Number.POSITIVE_INFINITY,
                   ease: "linear",
                 }}
-                className="absolute -top-4 -right-4 w-20 h-20 border-4 border-orange-500/30 rounded-full"
+                className="absolute -top-4 -right-4 w-20 h-20 border-4 border-[#00bfff]/30 rounded-full"
               />
               <motion.div
                 animate={{ rotate: -360 }}
@@ -199,7 +200,7 @@ export function MissionVision() {
                   repeat: Number.POSITIVE_INFINITY,
                   ease: "linear",
                 }}
-                className="absolute -bottom-4 -left-4 w-16 h-16 border-4 border-red-500/30 rounded-full"
+                className="absolute -bottom-4 -left-4 w-16 h-16 border-4 border-[#007bff]/30 rounded-full"
               />
             </motion.div>
           </motion.div>

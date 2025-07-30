@@ -68,7 +68,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="py-16 md:py-20 relative">
+    <section className="py-16 md:py-20 relative bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Contact Form */}
@@ -79,7 +79,7 @@ export default function ContactForm() {
             viewport={{ once: true }}
             className="order-2 lg:order-1"
           >
-            <Card className="bg-white shadow-2xl border-0 overflow-hidden">
+            <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] shadow-2xl border-0 overflow-hidden">
               <CardContent className="p-6 md:p-8">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
@@ -259,7 +259,7 @@ export default function ContactForm() {
                           (Select all that apply)
                         </span>
                       </Label>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-48 overflow-y-auto p-4 border border-gray-200 rounded-lg bg-gray-50">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-48 overflow-y-auto p-4 border border-gray-200 rounded-lg bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] ">
                         {services.map((service, index) => (
                           <motion.div
                             key={service}
@@ -352,7 +352,7 @@ export default function ContactForm() {
                       <Button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-gradient-to-r from-orange-600 to-red-700 hover:from-orange-700 hover:to-red-800 text-white py-3 text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                        className="w-full bg-gradient-to-r from-[#00bfff] to-[#007bff] hover:from-[#0099e6] hover:to-[#0066cc] text-white py-3 text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#00bfff]/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                       >
                         {isSubmitting ? (
                           <div className="flex items-center justify-center">
@@ -385,7 +385,7 @@ export default function ContactForm() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="bg-gradient-to-br from-orange-100 to-red-100 rounded-3xl p-8 md:p-12 backdrop-blur-sm border border-orange-200/50 shadow-xl"
+                className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] rounded-3xl p-8 md:p-12 backdrop-blur-sm border border-[#b3e0ff]/50 shadow-xl"
               >
                 <motion.div
                   animate={{
@@ -402,10 +402,10 @@ export default function ContactForm() {
                   🤝
                 </motion.div>
 
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold text-black mb-4">
                   Let&apos;s Collaborate
                 </h3>
-                <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
                   Ready to transform your ideas into reality? Our team of
                   experts is here to help you build innovative solutions that
                   drive success.
@@ -429,7 +429,7 @@ export default function ContactForm() {
                       <div className="text-2xl md:text-3xl mb-2">
                         {item.emoji}
                       </div>
-                      <p className="text-xs md:text-sm text-gray-700 font-medium">
+                      <p className="text-xs md:text-sm text-muted-foreground font-medium">
                         {item.text}
                       </p>
                     </motion.div>

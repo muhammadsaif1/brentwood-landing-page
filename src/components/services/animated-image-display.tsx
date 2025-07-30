@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AnimatedImageDisplay() {
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -16,7 +16,7 @@ export default function AnimatedImageDisplay() {
           {/* Main Image Container */}
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             {/* Animated Tech Illustration */}
-            <div className="aspect-video bg-gradient-to-br from-orange-500 via-red-500 to-orange-600 flex items-center justify-center relative overflow-hidden">
+            <div className="aspect-video bg-gradient-to-br from-[#00f6ff] via-[#00bfff] to-[#007bff] flex items-center justify-center relative overflow-hidden">
               {/* Animated Background Elements */}
               <motion.div
                 animate={{
@@ -80,14 +80,12 @@ export default function AnimatedImageDisplay() {
               ))}
 
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-transparent to-red-500/20" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/20 via-transparent to-[#007bff]/20" />
             </div>
 
             {/* Overlay Lines */}
             <motion.div
-              animate={{
-                x: ["-100%", "100%"],
-              }}
+              animate={{ x: ["-100%", "100%"] }}
               transition={{
                 duration: 4,
                 repeat: Number.POSITIVE_INFINITY,
@@ -96,9 +94,7 @@ export default function AnimatedImageDisplay() {
               className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent"
             />
             <motion.div
-              animate={{
-                x: ["100%", "-100%"],
-              }}
+              animate={{ x: ["100%", "-100%"] }}
               transition={{
                 duration: 4,
                 repeat: Number.POSITIVE_INFINITY,
@@ -120,7 +116,7 @@ export default function AnimatedImageDisplay() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut",
             }}
-            className="absolute -top-6 -right-6 w-12 h-12 bg-orange-400 rounded-full opacity-20 blur-sm"
+            className="absolute -top-6 -right-6 w-12 h-12 bg-[#00bfff] rounded-full opacity-20 blur-sm"
           />
           <motion.div
             animate={{
@@ -132,7 +128,7 @@ export default function AnimatedImageDisplay() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut",
             }}
-            className="absolute -bottom-4 -left-4 w-8 h-8 bg-red-400 rounded-full opacity-30 blur-sm"
+            className="absolute -bottom-4 -left-4 w-8 h-8 bg-[#007bff] rounded-full opacity-30 blur-sm"
           />
         </motion.div>
       </div>

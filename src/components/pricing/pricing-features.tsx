@@ -18,7 +18,7 @@ export default function PricingFeatures() {
   return (
     <section className="py-20 bg-gray-50 relative overflow-hidden">
       {/* Top Animated Line */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{
@@ -31,7 +31,7 @@ export default function PricingFeatures() {
       </div>
 
       {/* Bottom Animated Line */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["100%", "-100%"] }}
           transition={{
@@ -61,7 +61,7 @@ export default function PricingFeatures() {
               className="text-4xl md:text-5xl font-bold text-gray-900"
             >
               What&apos;s{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#00f6ff] to-[#007bff] bg-clip-text text-transparent">
                 Included
               </span>
             </motion.h2>
@@ -90,7 +90,7 @@ export default function PricingFeatures() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
-                    className="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                    className="w-6 h-6 bg-gradient-to-r from-[#00f6ff] to-[#007bff] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                   >
                     <Check className="w-4 h-4 text-white" />
                   </motion.div>
@@ -110,7 +110,7 @@ export default function PricingFeatures() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative h-96 bg-gradient-to-br from-orange-100 to-red-100 rounded-3xl overflow-hidden">
+            <div className="relative h-96 bg-gradient-to-br from-[#ccf5ff] to-[#cce0ff] rounded-3xl overflow-hidden">
               {/* Animated Elements */}
               <motion.div
                 animate={{
@@ -141,7 +141,7 @@ export default function PricingFeatures() {
                     ease: "easeInOut",
                     delay: i * 0.5,
                   }}
-                  className="absolute w-4 h-4 bg-orange-400 rounded-full opacity-60"
+                  className="absolute w-4 h-4 bg-[#00bfff] rounded-full opacity-60"
                   style={{
                     left: `${20 + i * 10}%`,
                     top: `${20 + (i % 3) * 25}%`,

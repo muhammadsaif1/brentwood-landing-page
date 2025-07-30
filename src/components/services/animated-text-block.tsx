@@ -8,9 +8,9 @@ interface AnimatedTextBlockProps {
 
 export default function AnimatedTextBlock({ text }: AnimatedTextBlockProps) {
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Top Animated Line */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{
@@ -23,7 +23,7 @@ export default function AnimatedTextBlock({ text }: AnimatedTextBlockProps) {
       </div>
 
       {/* Bottom Animated Line */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["100%", "-100%"] }}
           transition={{
@@ -52,7 +52,7 @@ export default function AnimatedTextBlock({ text }: AnimatedTextBlockProps) {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={
-                  index % 3 === 0 ? "text-orange-500" : "text-gray-900"
+                  index % 3 === 0 ? "text-[#007bff]" : "text-foreground"
                 }
               >
                 {word}{" "}

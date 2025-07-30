@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function LocationMap() {
   return (
-    <section className="py-16 md:py-20 relative">
+    <section className="py-16 md:py-20 bg-background relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -13,10 +13,10 @@ export default function LocationMap() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Visit Us
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Located in the heart of Islamabad, we&apos;re always ready to
             welcome you
           </p>
@@ -27,7 +27,7 @@ export default function LocationMap() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="bg-white p-4 md:p-8 rounded-3xl shadow-2xl border border-orange-100"
+          className="bg-background p-4 md:p-8 rounded-3xl shadow-2xl border border-[#00f6ff]/20"
         >
           <div className="relative overflow-hidden rounded-2xl">
             <iframe
@@ -47,20 +47,29 @@ export default function LocationMap() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-xs"
+              className="absolute top-4 left-4 bg-background/95 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-xs"
             >
-              <h3 className="font-bold text-gray-900 mb-2">Brentwood Global</h3>
-              <p className="text-sm text-gray-600 mb-2">
+              <h3 className="font-bold text-foreground mb-2">
+                Brentwood Global
+              </h3>
+              <p className="text-sm text-muted-foreground mb-2">
                 Technology & Innovation Hub
               </p>
-              <p className="text-xs text-gray-500">📍 Islamabad, Pakistan</p>
+              <p className="text-xs text-muted-foreground">
+                📍 Islamabad, Pakistan
+              </p>
               <div className="mt-3 flex items-center space-x-2">
                 <motion.div
                   animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                  transition={{
+                    duration: 2,
+                    repeat: Number.POSITIVE_INFINITY,
+                  }}
                   className="w-2 h-2 bg-green-500 rounded-full"
                 />
-                <span className="text-xs text-gray-600">We&apos;re here!</span>
+                <span className="text-xs text-muted-foreground">
+                  We&apos;re here!
+                </span>
               </div>
             </motion.div>
           </div>
@@ -72,7 +81,7 @@ export default function LocationMap() {
             viewport={{ once: true }}
             className="mt-6 text-center"
           >
-            <p className="text-gray-600 text-sm md:text-base">
+            <p className="text-muted-foreground text-sm md:text-base">
               📧 contact@brentwoodglobal.com • 📞 +92 123 4567890
             </p>
           </motion.div>

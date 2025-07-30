@@ -30,7 +30,7 @@ export default function ContactInfo() {
   ];
 
   return (
-    <section className="py-16 md:py-20 relative">
+    <section className="py-16 md:py-20 bg-background relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,10 +39,10 @@ export default function ContactInfo() {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Get in Touch
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Multiple ways to reach us. Choose what works best for you.
           </p>
         </motion.div>
@@ -59,23 +59,23 @@ export default function ContactInfo() {
               viewport={{ once: true }}
               className="block group"
             >
-              <Card className="bg-white hover:bg-gray-50 transition-all duration-300 transform group-hover:shadow-2xl border-0 h-full shadow-lg">
+              <Card className="bg-background hover:bg-background/90 transition-all duration-300 transform group-hover:shadow-2xl border border-border h-full shadow-lg">
                 <CardContent className="p-6 md:p-8 text-center">
                   <motion.div
                     whileHover={{ rotate: 360, scale: 1.2 }}
                     transition={{ duration: 0.6 }}
-                    className="bg-gradient-to-r from-orange-500 to-red-600 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
+                    className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
                   >
                     <info.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
                   </motion.div>
 
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
                     {info.title}
                   </h3>
-                  <p className="text-base md:text-lg font-medium text-gray-800 mb-2 break-words">
+                  <p className="text-base md:text-lg font-medium text-foreground mb-2 break-words">
                     {info.value}
                   </p>
-                  <p className="text-sm md:text-base text-gray-600">
+                  <p className="text-sm md:text-base text-muted-foreground">
                     {info.description}
                   </p>
 
@@ -84,7 +84,7 @@ export default function ContactInfo() {
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
-                    className="h-0.5 bg-gradient-to-r from-orange-500 to-red-600 mx-auto mt-4"
+                    className="h-0.5 bg-gradient-to-r from-[#00f6ff] to-[#007bff] mx-auto mt-4"
                   />
                 </CardContent>
               </Card>

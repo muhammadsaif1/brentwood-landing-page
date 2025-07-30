@@ -37,9 +37,9 @@ export default function ARVRProjects() {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Animated Lines */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{
@@ -47,10 +47,10 @@ export default function ARVRProjects() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="w-full h-full bg-gradient-to-r from-transparent via-white to-transparent"
+          className="w-full h-full bg-gradient-to-r from-transparent via-foreground/60 to-transparent"
         />
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["100%", "-100%"] }}
           transition={{
@@ -58,7 +58,7 @@ export default function ARVRProjects() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="w-full h-full bg-gradient-to-r from-transparent via-white to-transparent"
+          className="w-full h-full bg-gradient-to-r from-transparent via-foreground/60 to-transparent"
         />
       </div>
 
@@ -70,13 +70,13 @@ export default function ARVRProjects() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             AR/VR{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Step into the future with immersive augmented and virtual reality
             experiences
           </p>
@@ -100,7 +100,7 @@ export default function ARVRProjects() {
                 transformStyle: "preserve-3d",
               }}
             >
-              <Card className="bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
+              <Card className="bg-background border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
                 <CardContent className="p-0">
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
@@ -117,13 +117,11 @@ export default function ARVRProjects() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileHover={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3 }}
-                      className="absolute inset-0 bg-gradient-to-br from-orange-500/90 to-red-600/90 flex items-center justify-center"
+                      className="absolute inset-0 bg-gradient-to-br from-[#00bfff]/80 to-[#007bff]/80 flex items-center justify-center"
                     >
                       <div className="text-white text-center">
                         <motion.div
-                          animate={{
-                            rotate: [0, 360],
-                          }}
+                          animate={{ rotate: [0, 360] }}
                           transition={{
                             duration: 2,
                             repeat: Number.POSITIVE_INFINITY,
@@ -145,15 +143,15 @@ export default function ARVRProjects() {
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.3 }}
-                      className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-orange-500/25 transition-all duration-300"
+                      className="w-12 h-12 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-[#00bfff]/25 transition-all duration-300"
                     >
                       <project.icon className="w-6 h-6 text-white" />
                     </motion.div>
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-[#007bff] transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">
+                    <p className="text-muted-foreground leading-relaxed text-sm">
                       {project.description}
                     </p>
 
@@ -162,7 +160,7 @@ export default function ARVRProjects() {
                       initial={{ width: 0 }}
                       whileHover={{ width: "100%" }}
                       transition={{ duration: 0.3 }}
-                      className="h-0.5 bg-gradient-to-r from-orange-500 to-red-600 mt-4 rounded-full"
+                      className="h-0.5 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] mt-4 rounded-full"
                     />
                   </div>
                 </CardContent>

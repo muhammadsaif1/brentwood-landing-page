@@ -1,4 +1,5 @@
 "use client";
+// #00f6ff
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -81,7 +82,10 @@ export default function Footer() {
             <div className="space-y-6">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold text-white tracking-wider">
-                  BRENTWOOD<span className="text-orange-500">∞</span>
+                  BRENTWOOD{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] font-bold text-2xl lg:text-3xl tracking-tight">
+                    ∞
+                  </span>
                 </h1>
                 <div className="text-xs text-gray-400 uppercase tracking-widest">
                   GLOBAL
@@ -163,7 +167,7 @@ export default function Footer() {
               >
                 <span className="text-white">GET A</span>
                 <br />
-                <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
                   QUOTE
                 </span>
               </motion.h2>
@@ -182,7 +186,7 @@ export default function Footer() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
               >
-                <Button className="bg-gradient-to-r from-orange-600 to-red-700 hover:from-orange-700 hover:to-red-800 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
+                <Button className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:from-[#00eaff] hover:via-[#00aaff] hover:to-[#0066cc] text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-[0_4px_20px_#00bfff40]">
                   Get Started
                 </Button>
               </motion.div>
@@ -204,7 +208,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="hover:text-orange-400 transition-colors duration-200 block"
+                    className="hover:text-[#00f6ff] transition-colors duration-200 block"
                   >
                     {link.name}
                   </Link>

@@ -21,7 +21,7 @@ export default function ProjectInMind() {
           repeat: Number.POSITIVE_INFINITY,
           ease: "linear",
         }}
-        className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-transparent to-red-500/20 bg-[length:200%_100%]"
+        className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/20 via-transparent to-[#007bff]/20 bg-[length:200%_100%]"
       />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -40,7 +40,7 @@ export default function ProjectInMind() {
             className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight"
           >
             Have a Project in{" "}
-            <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] to-[#007bff] bg-clip-text text-transparent">
               Mind?
             </span>
           </motion.h2>
@@ -50,7 +50,7 @@ export default function ProjectInMind() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed"
           >
             Let&apos;s turn your vision into reality. Our team is ready to bring
             innovation and expertise to your next big idea.
@@ -67,7 +67,7 @@ export default function ProjectInMind() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "easeInOut",
             }}
-            className="absolute top-20 left-1/4 w-16 h-16 bg-orange-400/20 rounded-full blur-xl"
+            className="absolute top-20 left-1/4 w-16 h-16 bg-[#00f6ff]/20 rounded-full blur-xl"
           />
           <motion.div
             animate={{
@@ -80,7 +80,7 @@ export default function ProjectInMind() {
               ease: "easeInOut",
               delay: 1,
             }}
-            className="absolute bottom-20 right-1/4 w-12 h-12 bg-red-400/20 rounded-full blur-xl"
+            className="absolute bottom-20 right-1/4 w-12 h-12 bg-[#007bff]/20 rounded-full blur-xl"
           />
         </motion.div>
       </div>

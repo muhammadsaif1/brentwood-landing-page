@@ -10,26 +10,26 @@ export default function FeatureTags() {
       icon: Eye,
       title: "Define Your Vision",
       description: "Collaborate with us to refine your goals.",
-      gradient: "from-orange-500 to-red-500",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
     },
     {
       icon: Palette,
       title: "Design with Clarity",
       description: "We bring precision to every detail.",
-      gradient: "from-red-500 to-orange-600",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
     },
     {
       icon: CheckCircle,
       title: "Deliver with Confidence",
       description: "From strategy to execution – we've got you covered.",
-      gradient: "from-orange-600 to-red-600",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
     },
   ];
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Moving Gradient Background */}
-      <div className="absolute inset-0">
+    <section className="py-20 bg-background relative overflow-hidden">
+      {/* Moving Gradient Background Overlay */}
+      <div className="absolute inset-0 opacity-5">
         <motion.div
           animate={{
             backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -39,7 +39,7 @@ export default function FeatureTags() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="w-full h-full bg-gradient-to-r from-orange-100 via-red-50 to-orange-100 bg-[length:200%_100%]"
+          className="w-full h-full bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-[length:200%_100%]"
         />
       </div>
 
@@ -54,10 +54,10 @@ export default function FeatureTags() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden">
+              <Card className="bg-white/5 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-8 text-center relative">
-                  {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/0 to-red-500/0 group-hover:from-orange-500/10 group-hover:to-red-500/10 transition-all duration-300" />
+                  {/* Hover Glow Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/0 to-[#007bff]/0 group-hover:from-[#00f6ff]/10 group-hover:to-[#007bff]/10 transition-all duration-300" />
 
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
@@ -67,14 +67,14 @@ export default function FeatureTags() {
                     <feature.icon className="w-8 h-8 text-white" />
                   </motion.div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-[#00bfff] transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-foreground/70 leading-relaxed">
                     {feature.description}
                   </p>
 
-                  {/* Bottom Accent Line */}
+                  {/* Animated Bottom Line */}
                   <motion.div
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}

@@ -47,7 +47,7 @@ export default function FAQsSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,13 +56,13 @@ export default function FAQsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Questions
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
             Find answers to common questions about our services, process, and
             how we can help your business grow
           </p>
@@ -86,12 +86,12 @@ export default function FAQsSection() {
               >
                 <AccordionItem
                   value={`item-${index}`}
-                  className="bg-gray-50 rounded-2xl px-6 border-0 shadow-sm hover:shadow-md transition-all duration-300"
+                  className="bg-white/5 rounded-2xl px-6 border-0 shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-orange-600 transition-colors py-6 text-lg">
+                  <AccordionTrigger className="text-left font-semibold text-foreground hover:text-[#00bfff] transition-colors py-6 text-lg">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 leading-relaxed pb-6 text-base">
+                  <AccordionContent className="text-foreground/70 leading-relaxed pb-6 text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -108,11 +108,11 @@ export default function FAQsSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-lg text-foreground/70 mb-6">
             Still have questions? We&apos;re here to help!
           </p>
-          <Link href="/contact">
-            <Button className="bg-gradient-to-r from-orange-600 to-red-700 hover:from-orange-700 hover:to-red-800 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
+          <Link href="/contact-us">
+            <Button className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:from-[#00e0ff] hover:to-[#006bdf] text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#00bfff]/25">
               Contact Us
             </Button>
           </Link>

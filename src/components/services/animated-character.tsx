@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AnimatedCharacter() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
@@ -20,10 +20,10 @@ export default function AnimatedCharacter() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold text-gray-900"
+              className="text-4xl md:text-5xl font-bold text-foreground"
             >
               Empowering Your{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#00f6ff] to-[#007bff] bg-clip-text text-transparent">
                 Digital Future
               </span>
             </motion.h2>
@@ -33,7 +33,7 @@ export default function AnimatedCharacter() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-lg text-gray-600 leading-relaxed"
+              className="text-lg text-foreground/70 leading-relaxed"
             >
               At Brentwood Global, we don&apos;t just build technology – we
               craft digital experiences that transform businesses and empower
@@ -46,7 +46,7 @@ export default function AnimatedCharacter() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="text-lg text-gray-600 leading-relaxed"
+              className="text-lg text-foreground/70 leading-relaxed"
             >
               From startups to enterprise organizations, we&apos;ve helped
               hundreds of clients navigate their digital transformation journey
@@ -61,13 +61,13 @@ export default function AnimatedCharacter() {
               className="flex flex-wrap gap-4"
             >
               {["Innovation", "Excellence", "Partnership", "Results"].map(
-                (value, index) => (
+                (value) => (
                   <motion.div
                     key={value}
                     whileHover={{ scale: 1.05, y: -2 }}
-                    className="bg-white px-6 py-3 rounded-full shadow-md border border-orange-200 hover:border-orange-400 transition-all duration-300"
+                    className="bg-background px-6 py-3 rounded-full shadow-md border border-[#00f6ff]/20 hover:border-[#007bff]/60 transition-all duration-300"
                   >
-                    <span className="text-orange-600 font-semibold">
+                    <span className="text-[#007bff] font-semibold">
                       {value}
                     </span>
                   </motion.div>
@@ -84,12 +84,10 @@ export default function AnimatedCharacter() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative h-96 bg-gradient-to-br from-orange-100 to-red-100 rounded-3xl overflow-hidden">
-              {/* Animated Character */}
+            <div className="relative h-96 bg-gradient-to-br from-[#00f6ff]/10 to-[#007bff]/10 rounded-3xl overflow-hidden">
+              {/* Rocket */}
               <motion.div
-                animate={{
-                  y: [0, -20, 0],
-                }}
+                animate={{ y: [0, -20, 0] }}
                 transition={{
                   duration: 4,
                   repeat: Number.POSITIVE_INFINITY,
@@ -100,11 +98,9 @@ export default function AnimatedCharacter() {
                 <div className="text-8xl">🚀</div>
               </motion.div>
 
-              {/* Moving Person */}
+              {/* Person */}
               <motion.div
-                animate={{
-                  y: [0, 300, 0],
-                }}
+                animate={{ y: [0, 300, 0] }}
                 transition={{
                   duration: 8,
                   repeat: Number.POSITIVE_INFINITY,
@@ -115,7 +111,7 @@ export default function AnimatedCharacter() {
                 <div className="text-6xl">🧑‍💻</div>
               </motion.div>
 
-              {/* Floating Elements */}
+              {/* Floating Dots */}
               {[...Array(6)].map((_, i) => (
                 <motion.div
                   key={i}
@@ -130,7 +126,7 @@ export default function AnimatedCharacter() {
                     ease: "easeInOut",
                     delay: i * 0.5,
                   }}
-                  className="absolute w-4 h-4 bg-orange-400 rounded-full opacity-60"
+                  className="absolute w-4 h-4 bg-[#00bfff] rounded-full opacity-60"
                   style={{
                     left: `${20 + i * 10}%`,
                     top: `${20 + (i % 3) * 25}%`,
@@ -140,9 +136,7 @@ export default function AnimatedCharacter() {
 
               {/* Tech Icons */}
               <motion.div
-                animate={{
-                  rotate: [0, 360],
-                }}
+                animate={{ rotate: [0, 360] }}
                 transition={{
                   duration: 20,
                   repeat: Number.POSITIVE_INFINITY,
@@ -154,9 +148,7 @@ export default function AnimatedCharacter() {
               </motion.div>
 
               <motion.div
-                animate={{
-                  rotate: [360, 0],
-                }}
+                animate={{ rotate: [360, 0] }}
                 transition={{
                   duration: 15,
                   repeat: Number.POSITIVE_INFINITY,
@@ -168,7 +160,7 @@ export default function AnimatedCharacter() {
               </motion.div>
             </div>
 
-            {/* Floating Decorative Elements */}
+            {/* Decorative Blobs */}
             <motion.div
               animate={{
                 y: [0, -20, 0],
@@ -179,7 +171,7 @@ export default function AnimatedCharacter() {
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "easeInOut",
               }}
-              className="absolute -top-6 -right-6 w-12 h-12 bg-orange-400 rounded-full opacity-20 blur-sm"
+              className="absolute -top-6 -right-6 w-12 h-12 bg-[#00bfff] rounded-full opacity-20 blur-sm"
             />
             <motion.div
               animate={{
@@ -191,7 +183,7 @@ export default function AnimatedCharacter() {
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "easeInOut",
               }}
-              className="absolute -bottom-4 -left-4 w-8 h-8 bg-red-400 rounded-full opacity-30 blur-sm"
+              className="absolute -bottom-4 -left-4 w-8 h-8 bg-[#007bff] rounded-full opacity-30 blur-sm"
             />
           </motion.div>
         </div>

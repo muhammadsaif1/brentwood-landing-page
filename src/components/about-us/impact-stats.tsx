@@ -82,13 +82,13 @@ export function ImpactStats() {
 
   return (
     <section
-      className="py-20 bg-white relative overflow-hidden"
+      className="py-20 bg-background relative overflow-hidden"
       id="impact-stats"
     >
       {/* Animated Lines */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
-          className="h-full w-20 bg-gradient-to-r from-orange-400 to-orange-600"
+          className="h-full w-20 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff]"
           animate={{ x: [-100, 1200] }}
           transition={{
             duration: 3,
@@ -97,9 +97,9 @@ export function ImpactStats() {
           }}
         />
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
-          className="h-full w-20 bg-gradient-to-r from-orange-400 to-orange-600"
+          className="h-full w-20 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff]"
           animate={{ x: [1200, -100] }}
           transition={{
             duration: 3,
@@ -114,7 +114,7 @@ export function ImpactStats() {
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-orange-500/20 rounded-full"
+            className="absolute w-2 h-2 bg-[#00bfff]/20 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -146,18 +146,18 @@ export function ImpactStats() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                <Card className="bg-background border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group">
                   <CardContent className="p-8 text-center">
                     <motion.div
                       whileHover={{ rotate: 360, scale: 1.2 }}
                       transition={{ duration: 0.6 }}
-                      className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-full mb-6"
+                      className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] rounded-full mb-6"
                     >
                       <Icon className="w-8 h-8 text-white" />
                     </motion.div>
 
                     <motion.div
-                      className="text-5xl font-bold text-gray-900 mb-2"
+                      className="text-5xl font-bold text-foreground mb-2"
                       animate={{ scale: [1, 1.1, 1] }}
                       transition={{
                         duration: 2,
@@ -168,14 +168,16 @@ export function ImpactStats() {
                       {stat.suffix}
                     </motion.div>
 
-                    <p className="text-gray-600 font-medium">{stat.label}</p>
+                    <p className="text-muted-foreground font-medium">
+                      {stat.label}
+                    </p>
 
                     {/* Animated Bottom Line */}
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: "100%" }}
                       transition={{ duration: 1, delay: index * 0.2 }}
-                      className="h-1 bg-gradient-to-r from-orange-500 to-red-600 mt-4 rounded-full"
+                      className="h-1 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] mt-4 rounded-full"
                     />
                   </CardContent>
                 </Card>
@@ -192,7 +194,7 @@ export function ImpactStats() {
           viewport={{ once: true }}
           className="text-center max-w-4xl mx-auto"
         >
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed">
             Our journey is defined by numbers that reflect trust, commitment,
             and performance. Every project represents a story of collaboration
             and success.

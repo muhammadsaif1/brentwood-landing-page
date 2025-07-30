@@ -43,7 +43,7 @@ export default function ContactCTA() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="w-full h-full bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-[length:200%_100%]"
+          className="w-full h-full bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-[length:200%_100%]"
         />
 
         {/* Pulsating Overlay */}
@@ -56,7 +56,7 @@ export default function ContactCTA() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           }}
-          className="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-transparent to-red-400/20"
+          className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/20 via-transparent to-[#007bff]/20"
         />
       </div>
 
@@ -98,8 +98,7 @@ export default function ContactCTA() {
             viewport={{ once: true }}
             className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight"
           >
-            Ready to Start{" "}
-            <span className="text-orange-200">Your Project?</span>
+            Ready to Start <span className="text-[#b3eaff]">Your Project?</span>
           </motion.h2>
 
           <motion.p
@@ -138,7 +137,7 @@ export default function ContactCTA() {
                 {method.title}
               </h3>
               <p className="text-white/80 mb-4">{method.description}</p>
-              <p className="text-orange-200 font-semibold">{method.label}</p>
+              <p className="text-[#b3eaff] font-semibold">{method.label}</p>
             </motion.a>
           ))}
         </div>
@@ -152,7 +151,7 @@ export default function ContactCTA() {
           className="text-center"
         >
           <Link href="/contact">
-            <Button className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-6 text-xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group relative overflow-hidden">
+            <Button className="bg-white text-[#007bff] hover:bg-[#e6f7ff] px-12 py-6 text-xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group relative overflow-hidden">
               <span className="relative z-10 flex items-center">
                 Get Your Free Quote
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />

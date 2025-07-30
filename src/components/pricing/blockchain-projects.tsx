@@ -37,7 +37,7 @@ export default function BlockchainProjects() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-5">
         <motion.div
@@ -49,7 +49,7 @@ export default function BlockchainProjects() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%23FF7A00%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"
+          className="w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%2300bfff%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"
         />
       </div>
 
@@ -61,13 +61,13 @@ export default function BlockchainProjects() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Blockchain{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Revolutionize your business with decentralized solutions and
             blockchain technology
           </p>
@@ -91,7 +91,7 @@ export default function BlockchainProjects() {
                 transformStyle: "preserve-3d",
               }}
             >
-              <Card className="bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
+              <Card className="bg-background border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
                 <CardContent className="p-0">
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
@@ -109,7 +109,7 @@ export default function BlockchainProjects() {
                       initial={{ x: "-100%" }}
                       whileHover={{ x: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="absolute inset-0 bg-gradient-to-r from-orange-500/80 to-red-600/80 flex items-center justify-center"
+                      className="absolute inset-0 bg-gradient-to-r from-[#00bfff]/80 to-[#007bff]/80 flex items-center justify-center"
                     >
                       <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -128,15 +128,15 @@ export default function BlockchainProjects() {
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
-                      className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-orange-500/25 transition-all duration-300"
+                      className="w-12 h-12 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-[#00bfff]/25 transition-all duration-300"
                     >
                       <project.icon className="w-6 h-6 text-white" />
                     </motion.div>
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-[#007bff] transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">
+                    <p className="text-muted-foreground leading-relaxed text-sm">
                       {project.description}
                     </p>
 
@@ -145,7 +145,7 @@ export default function BlockchainProjects() {
                       initial={{ width: 0 }}
                       whileHover={{ width: "100%" }}
                       transition={{ duration: 0.3 }}
-                      className="h-0.5 bg-gradient-to-r from-orange-500 to-red-600 mt-4 rounded-full"
+                      className="h-0.5 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] mt-4 rounded-full"
                     />
                   </div>
                 </CardContent>

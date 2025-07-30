@@ -37,9 +37,9 @@ export default function AIProjectsSection() {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Top Animated Line */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{
@@ -64,10 +64,10 @@ export default function AIProjectsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             AI Projects
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             From intelligent automation to predictive analytics, our AI services
             help you unlock new dimensions of efficiency.
           </p>
@@ -84,7 +84,7 @@ export default function AIProjectsSection() {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
+              <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
                 <CardContent className="p-0">
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
@@ -103,24 +103,24 @@ export default function AIProjectsSection() {
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.3 }}
-                      className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all duration-300"
+                      className="w-12 h-12 bg-[#00bfff]/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#00bfff]/30 transition-all duration-300"
                     >
-                      <project.icon className="w-6 h-6 text-white" />
+                      <project.icon className="w-6 h-6 text-[#007bff]" />
                     </motion.div>
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                    <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#007bff] transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">
+                    <p className="text-muted-foreground leading-relaxed text-sm">
                       {project.description}
                     </p>
 
-                    {/* Animated Bottom Line */}
+                    {/* Bottom Line */}
                     <motion.div
                       initial={{ width: 0 }}
                       whileHover={{ width: "100%" }}
                       transition={{ duration: 0.3 }}
-                      className="h-0.5 bg-gradient-to-r from-orange-500 to-red-600 mt-4 rounded-full"
+                      className="h-0.5 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] mt-4 rounded-full"
                     />
                   </div>
                 </CardContent>
@@ -131,7 +131,7 @@ export default function AIProjectsSection() {
       </div>
 
       {/* Bottom Animated Line */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["100%", "-100%"] }}
           transition={{

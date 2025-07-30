@@ -7,10 +7,9 @@ import Link from "next/link";
 
 export function TeamCTA() {
   return (
-    <section className="py-20 bg-gradient-to-r from-orange-500 to-red-600 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Floating Particles */}
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
@@ -87,7 +86,7 @@ export function TeamCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-foreground mb-6"
           >
             Get to Know the Team Behind{" "}
             <motion.span
@@ -102,7 +101,7 @@ export function TeamCTA() {
                 duration: 2,
                 repeat: Number.POSITIVE_INFINITY,
               }}
-              className="text-white"
+              className="text-foreground"
             >
               Brentwood
             </motion.span>
@@ -114,7 +113,7 @@ export function TeamCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed"
+            className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed"
           >
             Let&apos;s start a conversation and build something great together.
             Our team is ready to turn your vision into reality.
@@ -130,16 +129,15 @@ export function TeamCTA() {
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-110 hover:shadow-2xl group relative overflow-hidden"
+                className="bg-background text-[#00bfff] hover:bg-gray-100 px-12 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-110 hover:shadow-2xl group relative overflow-hidden"
               >
                 {/* Ripple Effect */}
                 <motion.div
-                  className="absolute inset-0 bg-orange-500/20 rounded-full"
+                  className="absolute inset-0 bg-[#00bfff]/20 rounded-full"
                   initial={{ scale: 0, opacity: 0 }}
                   whileHover={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.6 }}
                 />
-
                 <span className="relative z-10 flex items-center space-x-2">
                   <span>Contact Us</span>
                   <motion.div

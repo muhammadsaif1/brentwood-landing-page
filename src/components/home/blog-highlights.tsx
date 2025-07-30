@@ -51,7 +51,7 @@ export default function BlogHighlights() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20  bg-background text-foreground">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,13 +60,13 @@ export default function BlogHighlights() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Latest{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Insights
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-foreground max-w-3xl mx-auto">
             Stay updated with the latest trends, insights, and innovations in
             technology
           </p>
@@ -83,7 +83,7 @@ export default function BlogHighlights() {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
+              <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
                 <CardContent className="p-0">
                   {/* Thumbnail */}
                   <div className="relative overflow-hidden">
@@ -98,7 +98,7 @@ export default function BlogHighlights() {
 
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-[#00bfff] text-white px-3 py-1 rounded-full text-sm font-medium">
                         {post.category}
                       </span>
                     </div>
@@ -106,7 +106,7 @@ export default function BlogHighlights() {
 
                   {/* Content */}
                   <div className="p-6 flex flex-col h-full">
-                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors line-clamp-2">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#007bff] transition-colors line-clamp-2">
                       {post.title}
                     </h3>
 
@@ -130,7 +130,7 @@ export default function BlogHighlights() {
                     <Link href={`/blog/${post.slug}`}>
                       <Button
                         variant="outline"
-                        className="w-full border-orange-500 text-orange-600 hover:bg-orange-50 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300 bg-transparent"
+                        className="w-full border-[#00bfff] text-[#007bff] hover:bg-[#00f6ff]/10 group-hover:bg-[#007bff] group-hover:text-white transition-all duration-300 bg-transparent"
                       >
                         Read More
                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -152,7 +152,7 @@ export default function BlogHighlights() {
           className="text-center mt-12"
         >
           <Link href="/blog">
-            <Button className="bg-gradient-to-r from-orange-600 to-red-700 hover:from-orange-700 hover:to-red-800 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25 group">
+            <Button className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:from-[#00f6ff] hover:to-[#007bff] text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#00bfff]/25 group">
               View All Articles
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>

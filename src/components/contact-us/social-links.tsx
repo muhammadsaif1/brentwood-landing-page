@@ -48,7 +48,7 @@ export default function SocialLinks() {
   ];
 
   return (
-    <section className="py-12 relative">
+    <section className="py-12 bg-background relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -57,10 +57,10 @@ export default function SocialLinks() {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             Connect With Us
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Follow us on social media for the latest updates and insights
           </p>
         </motion.div>
@@ -96,9 +96,9 @@ export default function SocialLinks() {
               <div className="absolute inset-0 rounded-2xl bg-white/20 scale-0 group-hover:scale-100 transition-transform duration-300 opacity-0 group-hover:opacity-100" />
 
               {/* Tooltip */}
-              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none scale-95 group-hover:scale-100">
+              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-foreground text-background text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap pointer-events-none scale-95 group-hover:scale-100">
                 {social.name}
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-foreground"></div>
               </div>
 
               {/* Glow effect */}

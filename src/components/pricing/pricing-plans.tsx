@@ -78,7 +78,7 @@ export default function PricingPlans() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -87,13 +87,13 @@ export default function PricingPlans() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Choose Your{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] to-[#007bff] bg-clip-text text-transparent">
               Plan
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Select the perfect plan that matches your project requirements and
             business goals
           </p>
@@ -110,7 +110,6 @@ export default function PricingPlans() {
               viewport={{ once: true }}
               className="group relative"
             >
-              {/* Popular Badge */}
               {plan.popular && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -119,7 +118,7 @@ export default function PricingPlans() {
                   viewport={{ once: true }}
                   className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10"
                 >
-                  <div className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
+                  <div className="bg-gradient-to-r from-[#00f6ff] to-[#007bff] text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
                     <Star className="w-4 h-4" />
                     <span>Most Popular</span>
                   </div>
@@ -127,26 +126,24 @@ export default function PricingPlans() {
               )}
 
               <Card
-                className={`bg-white border-2 shadow-lg hover:shadow-2xl transition-all duration-300 h-full relative overflow-hidden ${
+                className={`bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-2 shadow-lg hover:shadow-2xl transition-all duration-300 h-full relative overflow-hidden ${
                   plan.popular
-                    ? "border-orange-500 hover:border-orange-600"
-                    : "border-gray-200 hover:border-orange-300"
+                    ? "border-[#00bfff] hover:border-[#007bff]"
+                    : "border-gray-200 hover:border-[#00bfff]"
                 }`}
               >
-                {/* Glow Effect */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                   className={`absolute inset-0 ${
                     plan.popular
-                      ? "bg-gradient-to-r from-orange-500/5 to-red-500/5"
-                      : "bg-gradient-to-r from-orange-500/3 to-red-500/3"
+                      ? "bg-gradient-to-r from-[#00f6ff]/5 to-[#007bff]/5"
+                      : "bg-gradient-to-r from-[#00f6ff]/3 to-[#007bff]/3"
                   }`}
                 />
 
                 <CardContent className="p-8 relative z-10">
-                  {/* Plan Header */}
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       {plan.name}
@@ -166,7 +163,6 @@ export default function PricingPlans() {
                     </div>
                   </div>
 
-                  {/* Features */}
                   <div className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <motion.div
@@ -180,7 +176,7 @@ export default function PricingPlans() {
                         viewport={{ once: true }}
                         className="flex items-start space-x-3"
                       >
-                        <div className="w-5 h-5 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div className="w-5 h-5 bg-gradient-to-r from-[#00f6ff] to-[#007bff] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                           <Check className="w-3 h-3 text-white" />
                         </div>
                         <span className="text-gray-700 text-sm">{feature}</span>
@@ -188,12 +184,11 @@ export default function PricingPlans() {
                     ))}
                   </div>
 
-                  {/* CTA Button */}
                   <Button
                     className={`w-full py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
                       plan.popular
-                        ? "bg-gradient-to-r from-orange-600 to-red-700 hover:from-orange-700 hover:to-red-800 text-white shadow-lg hover:shadow-orange-500/25"
-                        : "bg-white border-2 border-orange-500 text-orange-600 hover:bg-orange-50"
+                        ? "bg-gradient-to-r from-[#00bfff] to-[#007bff] hover:from-[#00aadd] hover:to-[#0066cc] text-white shadow-lg hover:shadow-[#00bfff]/25"
+                        : "bg-white border-2 border-[#00bfff] text-[#007bff] hover:bg-[#f0fcff]"
                     }`}
                   >
                     Book Appointment

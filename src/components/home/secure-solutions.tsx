@@ -29,9 +29,9 @@ export default function SecureSolutions() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Animated Lines */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{
@@ -42,7 +42,7 @@ export default function SecureSolutions() {
           className="w-full h-full bg-gradient-to-r from-transparent via-white to-transparent"
         />
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["100%", "-100%"] }}
           transition={{
@@ -62,13 +62,13 @@ export default function SecureSolutions() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Secure{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] to-[#007bff] bg-clip-text text-transparent">
               Solutions
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
             Protecting your business with enterprise-grade security solutions
             and cutting-edge technology
           </p>
@@ -83,20 +83,20 @@ export default function SecureSolutions() {
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100"
+              className="bg-background p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-white/10"
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 transition={{ duration: 0.3 }}
-                className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-orange-500/25"
+                className="w-16 h-16 bg-gradient-to-r from-[#00f6ff] to-[#007bff] rounded-2xl flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-[#00bfff]/25"
               >
                 <solution.icon className="w-8 h-8 text-white" />
               </motion.div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
+              <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-[#00bfff] transition-colors">
                 {solution.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-foreground/70 leading-relaxed">
                 {solution.description}
               </p>
 
@@ -105,7 +105,7 @@ export default function SecureSolutions() {
                 initial={{ width: 0 }}
                 whileHover={{ width: "100%" }}
                 transition={{ duration: 0.3 }}
-                className="h-0.5 bg-gradient-to-r from-orange-500 to-red-600 mt-6 rounded-full"
+                className="h-0.5 bg-gradient-to-r from-[#00f6ff] to-[#007bff] mt-6 rounded-full"
               />
             </motion.div>
           ))}

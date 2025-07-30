@@ -37,7 +37,7 @@ export default function ConsultationProcess() {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-5">
         <motion.div
@@ -49,7 +49,7 @@ export default function ConsultationProcess() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%23FF7A00%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"
+          className="w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%2300bfff%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"
         />
       </div>
 
@@ -61,13 +61,13 @@ export default function ConsultationProcess() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Our{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Consultation Process
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From initial discussion to project launch, we ensure a smooth and
             transparent process
           </p>
@@ -84,10 +84,10 @@ export default function ConsultationProcess() {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 h-full relative overflow-hidden">
+              <Card className="bg-background border-0 shadow-lg hover:shadow-2xl transition-all duration-300 h-full relative overflow-hidden">
                 <CardContent className="p-8 text-center relative">
                   {/* Step Number */}
-                  <div className="absolute top-4 right-4 text-6xl font-bold text-orange-100 group-hover:text-orange-200 transition-colors">
+                  <div className="absolute top-4 right-4 text-6xl font-bold text-[#b3eaff] group-hover:text-[#d1f1ff] transition-colors">
                     {step.step}
                   </div>
 
@@ -95,15 +95,15 @@ export default function ConsultationProcess() {
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
-                    className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-orange-500/25 relative z-10"
+                    className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-[#00bfff]/25 relative z-10"
                   >
                     <step.icon className="w-8 h-8 text-white" />
                   </motion.div>
 
-                  <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
+                  <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-[#007bff] transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
 
@@ -112,7 +112,7 @@ export default function ConsultationProcess() {
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
-                    className="h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto mt-6 rounded-full"
+                    className="h-1 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] mx-auto mt-6 rounded-full"
                   />
                 </CardContent>
               </Card>

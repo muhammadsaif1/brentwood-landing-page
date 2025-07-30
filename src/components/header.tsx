@@ -25,14 +25,16 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800">
+    <header className="sticky top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-white font-bold text-xl tracking-wider">
               BRENTWOOD
-              <span className="text-orange-500 ">∞</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] font-bold text-2xl lg:text-3xl tracking-tight">
+                ∞
+              </span>
             </div>
             <div className="text-xs text-gray-400 uppercase tracking-widest">
               GLOBAL
@@ -71,8 +73,8 @@ export default function Header() {
           </nav>
 
           {/* Contact Button */}
-          <Button className="hidden lg:block bg-gradient-to-r from-orange-600 to-red-700 hover:from-orange-700 hover:to-red-800 text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105">
-            <Link href={"/contact-us"}>Contact Us</Link>
+          <Button className="hidden lg:block relative text-white px-6 py-2 rounded-full bg-gradient-to-br from-[#00f6ff] via-[#00c2ff] to-[#009ecc] hover:from-[#00e0ff] hover:via-[#00baff] hover:to-[#0084a3] transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-[0_8px_24px_rgba(0,246,255,0.4)] backdrop-blur-md">
+            <Link href="/contact-us">Contact Us</Link>
           </Button>
 
           {/* Mobile Menu */}
@@ -101,8 +103,8 @@ export default function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <Button className="bg-gradient-to-r from-orange-600 to-red-700 hover:from-orange-700 hover:to-red-800 text-white px-6 py-2 rounded-full mt-4">
-                  Contact Us
+                <Button className="w-full sm:w-auto bg-gradient-to-r from-[#00f6ff] to-[#007bff] hover:from-[#00e0ff] hover:to-[#005ce6] text-white text-sm sm:text-base px-4 sm:px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-blue-400/40">
+                  <Link href={"/contact-us"}>Contact Us</Link>
                 </Button>
               </div>
             </SheetContent>

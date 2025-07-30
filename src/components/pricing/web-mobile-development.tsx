@@ -93,7 +93,7 @@ export default function WebMobileDevelopment() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-500 to-red-600 relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22 fillOpacity=%220.1%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" />
@@ -114,7 +114,7 @@ export default function WebMobileDevelopment() {
             ease: "easeInOut",
             delay: i * 0.5,
           }}
-          className="absolute w-2 h-2 bg-white rounded-full"
+          className="absolute w-2 h-2 bg-[#00f6ff] rounded-full"
           style={{
             left: `${10 + i * 10}%`,
             top: `${15 + (i % 3) * 25}%`,
@@ -130,10 +130,10 @@ export default function WebMobileDevelopment() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Web & Mobile App Development
           </h2>
-          <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
             From responsive websites to native mobile applications, we deliver
             comprehensive development solutions that drive business growth and
             user engagement.
@@ -145,22 +145,18 @@ export default function WebMobileDevelopment() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto"
+            className="bg-[#00f6ff]/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto"
           >
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
               Complete Development Packages
             </h3>
-            <div className="grid md:grid-cols-2 gap-4 text-white/90">
+            <div className="grid md:grid-cols-2 gap-4 text-muted-foreground">
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-200">
-                  $2,500+
-                </div>
+                <div className="text-3xl font-bold text-[#00f6ff]">$2,500+</div>
                 <div className="text-sm">Web Development</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-200">
-                  $5,000+
-                </div>
+                <div className="text-3xl font-bold text-[#00f6ff]">$5,000+</div>
                 <div className="text-sm">Mobile Apps</div>
               </div>
             </div>
@@ -179,22 +175,22 @@ export default function WebMobileDevelopment() {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-white/10 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl hover:bg-white/20 transition-all duration-300 h-full">
+              <Card className="bg-background border border-[#00f6ff]/20 shadow-lg hover:shadow-2xl hover:bg-[#00f6ff]/5 transition-all duration-300 h-full">
                 <CardContent className="p-6">
                   {/* Icon */}
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
-                    className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/30 transition-all duration-300"
+                    className="w-16 h-16 bg-[#00f6ff]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#00f6ff]/20 transition-all duration-300"
                   >
-                    <service.icon className="w-8 h-8 text-white" />
+                    <service.icon className="w-8 h-8 text-[#00f6ff]" />
                   </motion.div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-200 transition-colors">
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-[#00f6ff] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-white/80 leading-relaxed text-sm mb-4">
+                  <p className="text-muted-foreground leading-relaxed text-sm mb-4">
                     {service.description}
                   </p>
 
@@ -212,19 +208,21 @@ export default function WebMobileDevelopment() {
                         viewport={{ once: true }}
                         className="flex items-center space-x-2"
                       >
-                        <div className="w-1.5 h-1.5 bg-orange-200 rounded-full" />
-                        <span className="text-white/70 text-xs">{feature}</span>
+                        <div className="w-1.5 h-1.5 bg-[#00f6ff] rounded-full" />
+                        <span className="text-muted-foreground text-xs">
+                          {feature}
+                        </span>
                       </motion.div>
                     ))}
                   </div>
 
                   {/* Price */}
-                  <div className="text-orange-200 font-bold text-lg mb-4">
+                  <div className="text-[#00f6ff] font-bold text-lg mb-4">
                     {service.price}
                   </div>
 
                   {/* CTA Button */}
-                  <Button className="w-full bg-white/20 hover:bg-white/30 text-white border-0 rounded-full transition-all duration-300 transform hover:scale-105">
+                  <Button className="w-full bg-[#00f6ff]/10 hover:bg-[#00f6ff]/20 text-foreground border-0 rounded-full transition-all duration-300 transform hover:scale-105">
                     Get Quote
                   </Button>
 
@@ -233,7 +231,7 @@ export default function WebMobileDevelopment() {
                     initial={{ width: 0 }}
                     whileHover={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
-                    className="h-0.5 bg-white/40 mt-4 rounded-full"
+                    className="h-0.5 bg-[#00f6ff]/30 mt-4 rounded-full"
                   />
                 </CardContent>
               </Card>
@@ -249,15 +247,15 @@ export default function WebMobileDevelopment() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
+          <div className="bg-[#00f6ff]/10 backdrop-blur-sm rounded-2xl p-8 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
               Need a Custom Solution?
             </h3>
-            <p className="text-white/90 mb-6">
+            <p className="text-muted-foreground mb-6">
               Every project is unique. Let&apos;s discuss your specific
               requirements and create a tailored development plan.
             </p>
-            <Button className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+            <Button className="bg-[#00f6ff] text-white hover:bg-[#00cfff] px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
               Schedule Consultation
             </Button>
           </div>

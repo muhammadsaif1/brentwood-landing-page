@@ -4,7 +4,6 @@ import GetToKnowUs from "@/components/home/get-to-know-us";
 import CompanyMetrics from "@/components/home/company-metrics";
 import SecureSolutions from "@/components/home/secure-solutions";
 import DecipheringAI from "@/components/home/deciphering-ai";
-import AdvancedServices from "@/components/home/advanced-services";
 import ServicesWeOffer from "@/components/home/services-we-offer";
 import IoTSection from "@/components/home/iot-section";
 import AIProjectsShowcase from "@/components/home/ai-projects-showcase";
@@ -26,7 +25,6 @@ export default function HomePage() {
       <CompanyMetrics />
       <SecureSolutions />
       <DecipheringAI />
-      <AdvancedServices />
       <ServicesWeOffer />
       <IoTSection />
       <AIProjectsShowcase />

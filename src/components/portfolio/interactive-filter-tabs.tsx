@@ -202,8 +202,9 @@ export default function InteractiveFilterTabs() {
   );
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -211,13 +212,13 @@ export default function InteractiveFilterTabs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Explore Our{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Work
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Filter through our diverse portfolio of successful projects across
             different industries
           </p>
@@ -229,7 +230,7 @@ export default function InteractiveFilterTabs() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center mb-12 bg-gray-100 rounded-2xl p-2 max-w-2xl mx-auto"
+          className="flex flex-wrap justify-center mb-12 bg-muted rounded-2xl p-2 max-w-2xl mx-auto"
         >
           {tabs.map((tab) => (
             <motion.button
@@ -242,15 +243,15 @@ export default function InteractiveFilterTabs() {
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 relative ${
                 activeTab === tab
-                  ? "bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-white/50"
+                  ? "bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] text-white shadow-lg"
+                  : "text-muted-foreground hover:text-foreground hover:bg-white/50"
               }`}
             >
               {tab}
               {activeTab === tab && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl -z-10"
+                  className="absolute inset-0 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] rounded-xl -z-10"
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 />
               )}
@@ -275,7 +276,6 @@ export default function InteractiveFilterTabs() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              {/* Project Image */}
               <div className="relative overflow-hidden">
                 <motion.img
                   whileHover={{ scale: 1.1 }}
@@ -300,7 +300,7 @@ export default function InteractiveFilterTabs() {
                     href={project.link}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition-colors"
+                    className="bg-[#00bfff] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#00a7e1] transition-colors"
                   >
                     View
                   </motion.a>
@@ -340,8 +340,8 @@ export default function InteractiveFilterTabs() {
                 whileTap={{ scale: 0.9 }}
                 className={`w-10 h-10 rounded-full font-semibold transition-all duration-300 ${
                   currentPage === index + 1
-                    ? "bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg"
-                    : "bg-gray-200 text-gray-600 hover:bg-gray-300"
+                    ? "bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] text-white shadow-lg"
+                    : "bg-muted text-muted-foreground hover:bg-muted/80"
                 }`}
               >
                 {index + 1}

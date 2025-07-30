@@ -51,7 +51,7 @@ export default function BoardOfExpertise() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-background text-foreground">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,13 +60,13 @@ export default function BoardOfExpertise() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Board of{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Expertise
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-[#4b5d6b] max-w-3xl mx-auto">
             Meet the talented individuals who drive innovation and excellence at
             Brentwood Global
           </p>
@@ -83,7 +83,7 @@ export default function BoardOfExpertise() {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-white border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
                 <CardContent className="p-0">
                   {/* Image */}
                   <div className="relative overflow-hidden">
@@ -110,13 +110,13 @@ export default function BoardOfExpertise() {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
+                    <h3 className="text-xl font-bold text-[#002f5f] mb-2 group-hover:text-[#007bff] transition-colors">
                       {member.name}
                     </h3>
-                    <p className="text-orange-500 font-semibold mb-3">
+                    <p className="text-[#00bfff] font-semibold mb-3">
                       {member.role}
                     </p>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-[#4b5d6b] leading-relaxed">
                       {member.bio}
                     </p>
 
@@ -125,7 +125,7 @@ export default function BoardOfExpertise() {
                       initial={{ width: 0 }}
                       whileHover={{ width: "100%" }}
                       transition={{ duration: 0.3 }}
-                      className="h-1 bg-gradient-to-r from-orange-500 to-red-600 mt-4 rounded-full"
+                      className="h-1 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] mt-4 rounded-full"
                     />
                   </div>
                 </CardContent>

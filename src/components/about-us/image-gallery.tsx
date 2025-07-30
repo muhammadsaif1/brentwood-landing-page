@@ -72,13 +72,13 @@ export function ImageGallery() {
   };
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         {[...Array(40)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-orange-500 rounded-full"
+            className="absolute w-1 h-1 bg-[#00bfff] rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -97,7 +97,6 @@ export function ImageGallery() {
       </div>
 
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -105,23 +104,21 @@ export function ImageGallery() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Behind the{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Scenes
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Take a glimpse into our world — from collaborative workspaces to
             innovative projects
           </p>
         </motion.div>
 
-        {/* Main Gallery */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Main Image Display */}
           <motion.div
-            className="relative overflow-hidden rounded-2xl shadow-2xl bg-white"
+            className="relative overflow-hidden rounded-2xl shadow-2xl bg-background"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -139,11 +136,7 @@ export function ImageGallery() {
                 transition={{ duration: 0.6 }}
                 whileHover={{ scale: 1.05 }}
               />
-
-              {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-
-              {/* Image Title */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -156,7 +149,7 @@ export function ImageGallery() {
               </motion.div>
             </div>
 
-            {/* Navigation Arrows */}
+            {/* Arrows */}
             <Button
               variant="ghost"
               size="icon"
@@ -175,7 +168,7 @@ export function ImageGallery() {
             </Button>
           </motion.div>
 
-          {/* Thumbnail Navigation */}
+          {/* Thumbnails */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -189,28 +182,28 @@ export function ImageGallery() {
                 onClick={() => goToSlide(index)}
                 className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden transition-all duration-300 ${
                   currentIndex === index
-                    ? "ring-4 ring-orange-500 scale-110"
+                    ? "ring-4 ring-[#00bfff] scale-110"
                     : "hover:scale-105 opacity-70 hover:opacity-100"
                 }`}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <img
-                  src={image.src || "/placeholder.svg"}
+                  src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover"
                 />
                 {currentIndex === index && (
                   <motion.div
                     layoutId="activeIndicator"
-                    className="absolute inset-0 bg-orange-500/20"
+                    className="absolute inset-0 bg-[#00bfff]/20"
                   />
                 )}
               </motion.button>
             ))}
           </motion.div>
 
-          {/* Progress Indicators */}
+          {/* Dots */}
           <div className="flex justify-center space-x-2 mt-6">
             {images.map((_, index) => (
               <motion.button
@@ -218,15 +211,15 @@ export function ImageGallery() {
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   currentIndex === index
-                    ? "bg-orange-500 scale-125"
-                    : "bg-gray-300 hover:bg-gray-400"
+                    ? "bg-[#00bfff] scale-125"
+                    : "bg-muted-foreground hover:bg-foreground"
                 }`}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
               >
                 {currentIndex === index && isAutoPlaying && (
                   <motion.div
-                    className="w-full h-full bg-orange-600 rounded-full"
+                    className="w-full h-full bg-[#007bff] rounded-full"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 7 }}

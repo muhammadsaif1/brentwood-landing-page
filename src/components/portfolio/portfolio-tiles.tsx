@@ -82,7 +82,7 @@ export default function PortfolioTiles() {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-5">
         <motion.div
@@ -94,7 +94,7 @@ export default function PortfolioTiles() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%23FF7A00%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"
+          className="w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%2300bfff%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"
         />
       </div>
 
@@ -106,13 +106,13 @@ export default function PortfolioTiles() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Featured{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Discover our latest innovations and successful digital
             transformations
           </p>
@@ -170,7 +170,7 @@ export default function PortfolioTiles() {
                     rotate: hoveredTile === index ? 360 : 0,
                   }}
                   transition={{ duration: 0.5 }}
-                  className="absolute inset-2 border-2 border-orange-500 rounded-xl pointer-events-none"
+                  className="absolute inset-2 border-2 border-[#00bfff] rounded-xl pointer-events-none"
                 />
               </div>
 
@@ -184,7 +184,7 @@ export default function PortfolioTiles() {
                 transition={{ duration: 0.3 }}
                 className="absolute inset-0 flex flex-col justify-end p-6 text-white"
               >
-                <span className="text-orange-400 text-sm font-semibold mb-2">
+                <span className="text-[#00f6ff] text-sm font-semibold mb-2">
                   {item.category}
                 </span>
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
@@ -194,7 +194,7 @@ export default function PortfolioTiles() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition-colors"
+                    className="bg-[#00bfff] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#007bff] transition-colors"
                   >
                     View
                   </motion.button>
@@ -219,7 +219,7 @@ export default function PortfolioTiles() {
                   repeat: Number.POSITIVE_INFINITY,
                   ease: "easeInOut",
                 }}
-                className="absolute -top-2 -right-2 w-4 h-4 bg-orange-400 rounded-full opacity-60 blur-sm"
+                className="absolute -top-2 -right-2 w-4 h-4 bg-[#00bfff] rounded-full opacity-60 blur-sm"
               />
             </motion.div>
           ))}

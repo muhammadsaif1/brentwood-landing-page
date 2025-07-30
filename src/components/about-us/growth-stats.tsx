@@ -57,7 +57,7 @@ export function GrowthStats() {
 
   return (
     <section
-      className="py-20 bg-white relative overflow-hidden"
+      className="py-20 bg-background relative overflow-hidden"
       id="growth-stats"
     >
       {/* Background Pattern */}
@@ -65,7 +65,7 @@ export function GrowthStats() {
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-orange-500 rounded-full"
+            className="absolute w-2 h-2 bg-[#00bfff] rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -98,10 +98,10 @@ export function GrowthStats() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold text-gray-900"
+              className="text-4xl md:text-5xl font-bold text-foreground"
             >
               Innovate with{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
                 Confidence
               </span>
             </motion.h2>
@@ -111,7 +111,7 @@ export function GrowthStats() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-xl text-gray-600 leading-relaxed"
+              className="text-xl text-muted-foreground leading-relaxed"
             >
               We turn complexity into clarity — combining technology, strategy,
               and trust to deliver solutions that drive real business results.
@@ -127,14 +127,14 @@ export function GrowthStats() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:brightness-110 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 Learn More
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 bg-transparent"
+                className="border-2 border-[#00bfff] text-[#00bfff] hover:bg-[#00bfff] hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 bg-transparent"
               >
                 View Services
               </Button>
@@ -154,25 +154,23 @@ export function GrowthStats() {
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="bg-gradient-to-r from-orange-50 to-red-50 border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden">
+              <Card className="bg-gradient-to-r from-[#e0f7ff] to-[#dceeff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-8 relative">
-                  {/* Ripple Effect */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-lg"
+                    className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/10 via-[#00bfff]/10 to-[#007bff]/10 rounded-lg"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   />
-
                   <div className="relative z-10 flex items-center justify-between">
                     <div>
                       <div className="flex items-center space-x-3 mb-2">
-                        <Heart className="w-8 h-8 text-orange-500" />
-                        <h3 className="text-lg font-semibold text-gray-900">
+                        <Heart className="w-8 h-8 text-[#00bfff]" />
+                        <h3 className="text-lg font-semibold text-foreground">
                           Customer Satisfaction Rate
                         </h3>
                       </div>
                       <motion.div
-                        className="text-4xl font-bold text-orange-600"
+                        className="text-4xl font-bold text-[#007bff]"
                         animate={{ scale: [1, 1.1, 1] }}
                         transition={{
                           duration: 2,
@@ -182,15 +180,13 @@ export function GrowthStats() {
                         {satisfactionCount}%
                       </motion.div>
                     </div>
-
-                    {/* Animated Icon */}
                     <motion.div
                       animate={{ rotate: [0, 10, -10, 0] }}
                       transition={{
                         duration: 2,
                         repeat: Number.POSITIVE_INFINITY,
                       }}
-                      className="text-orange-500"
+                      className="text-[#00bfff]"
                     >
                       <Heart className="w-16 h-16 opacity-20" />
                     </motion.div>
@@ -204,25 +200,23 @@ export function GrowthStats() {
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="bg-gradient-to-r from-red-50 to-orange-50 border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden">
+              <Card className="bg-gradient-to-r from-[#dceeff] to-[#e0f7ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-8 relative">
-                  {/* Ripple Effect */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-lg"
+                    className="absolute inset-0 bg-gradient-to-r from-[#007bff]/10 via-[#00bfff]/10 to-[#00f6ff]/10 rounded-lg"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   />
-
                   <div className="relative z-10 flex items-center justify-between">
                     <div>
                       <div className="flex items-center space-x-3 mb-2">
-                        <TrendingUp className="w-8 h-8 text-red-500" />
-                        <h3 className="text-lg font-semibold text-gray-900">
+                        <TrendingUp className="w-8 h-8 text-[#007bff]" />
+                        <h3 className="text-lg font-semibold text-foreground">
                           Annual Revenue Growth
                         </h3>
                       </div>
                       <motion.div
-                        className="text-4xl font-bold text-red-600"
+                        className="text-4xl font-bold text-[#007bff]"
                         animate={{ scale: [1, 1.1, 1] }}
                         transition={{
                           duration: 2,
@@ -232,15 +226,13 @@ export function GrowthStats() {
                         {growthCount}%
                       </motion.div>
                     </div>
-
-                    {/* Animated Icon */}
                     <motion.div
                       animate={{ y: [-5, 5, -5] }}
                       transition={{
                         duration: 2,
                         repeat: Number.POSITIVE_INFINITY,
                       }}
-                      className="text-red-500"
+                      className="text-[#007bff]"
                     >
                       <TrendingUp className="w-16 h-16 opacity-20" />
                     </motion.div>

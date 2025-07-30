@@ -48,7 +48,7 @@ export default function AIProjectsShowcase() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background text-foreground">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -57,13 +57,13 @@ export default function AIProjectsShowcase() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             AI Projects{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Showcase
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Discover how we&apos;re transforming industries with cutting-edge AI
             solutions
           </p>
@@ -79,7 +79,7 @@ export default function AIProjectsShowcase() {
             >
               {projects.map((project, index) => (
                 <div key={index} className="w-full flex-shrink-0">
-                  <Card className="bg-gradient-to-br from-gray-50 to-white border-0 shadow-2xl overflow-hidden">
+                  <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-2xl overflow-hidden">
                     <CardContent className="p-0">
                       <div className="grid lg:grid-cols-2 gap-0">
                         {/* Image */}
@@ -93,7 +93,7 @@ export default function AIProjectsShowcase() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                           <div className="absolute top-4 left-4">
-                            <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <span className="bg-[#00bfff] text-white px-3 py-1 rounded-full text-sm font-medium">
                               {project.category}
                             </span>
                           </div>
@@ -106,7 +106,7 @@ export default function AIProjectsShowcase() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
-                            className="text-3xl font-bold text-gray-900 mb-6"
+                            className="text-3xl font-bold text-foreground mb-6"
                           >
                             {project.title}
                           </motion.h3>
@@ -116,7 +116,7 @@ export default function AIProjectsShowcase() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className="text-lg text-gray-600 leading-relaxed mb-8"
+                            className="text-lg text-muted-foreground leading-relaxed mb-8"
                           >
                             {project.description}
                           </motion.p>
@@ -127,7 +127,7 @@ export default function AIProjectsShowcase() {
                             transition={{ duration: 0.6, delay: 0.4 }}
                             viewport={{ once: true }}
                           >
-                            <Button className="bg-gradient-to-r from-orange-600 to-red-700 hover:from-orange-700 hover:to-red-800 text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25 group">
+                            <Button className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:from-[#00e0ff] hover:to-[#005ce6] text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-400/25 group">
                               View Project Details
                               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
@@ -164,7 +164,7 @@ export default function AIProjectsShowcase() {
                 onClick={() => setCurrentSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide
-                    ? "bg-orange-500 scale-125"
+                    ? "bg-[#00bfff] scale-125"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
               />

@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export default function ContactHero() {
   return (
-    <section className="pt-24 pb-16 relative overflow-hidden">
+    <section className="pt-24 pb-16 relative overflow-hidden bg-background">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 via-transparent to-orange-200/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#00f6ff]/50 via-transparent to-[#00bfff]/30" />
 
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -20,7 +20,7 @@ export default function ContactHero() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="absolute top-20 left-10 w-32 h-32 bg-orange-200/20 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-32 h-32 bg-[#00f6ff]/20 rounded-full blur-xl"
         />
         <motion.div
           animate={{
@@ -32,7 +32,7 @@ export default function ContactHero() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="absolute bottom-20 right-10 w-48 h-48 bg-orange-300/20 rounded-full blur-xl"
+          className="absolute bottom-20 right-10 w-48 h-48 bg-[#00bfff]/20 rounded-full blur-xl"
         />
       </div>
 
@@ -42,10 +42,10 @@ export default function ContactHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-wider"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 tracking-wider"
           >
             Contact{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Brentwood Global
             </span>
           </motion.h1>
@@ -54,7 +54,7 @@ export default function ContactHero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto"
+            className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto"
           >
             Let&apos;s build something incredible together. Whether you have
             questions or ideas, we&apos;re just a message away.
@@ -66,7 +66,7 @@ export default function ContactHero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-8"
           >
-            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#00f6ff] to-[#007bff] mx-auto rounded-full" />
           </motion.div>
         </div>
       </div>

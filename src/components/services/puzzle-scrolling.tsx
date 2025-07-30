@@ -22,7 +22,7 @@ export default function PuzzleScrolling() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-4 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -31,13 +31,13 @@ export default function PuzzleScrolling() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Our{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Core Services
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Comprehensive technology solutions designed to transform your
             business
           </p>
@@ -66,10 +66,10 @@ export default function PuzzleScrolling() {
               className="relative group cursor-pointer"
             >
               {/* Puzzle Piece Shape */}
-              <div className="relative bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl p-8 min-w-[280px] shadow-lg group-hover:shadow-2xl transition-all duration-300">
+              <div className="relative bg-gradient-to-br from-[#00f6ff] via-[#00bfff] to-[#007bff] rounded-2xl p-8 min-w-[280px] shadow-lg group-hover:shadow-2xl transition-all duration-300">
                 {/* Puzzle Notch */}
-                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-full" />
-                <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full border-4 border-orange-500" />
+                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-gradient-to-br from-[#00f6ff] via-[#00bfff] to-[#007bff] rounded-full" />
+                <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white rounded-full border-4 border-[#00bfff]" />
 
                 {/* Content */}
                 <div className="relative z-10 text-center">

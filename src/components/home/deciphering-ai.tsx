@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export default function DecipheringAI() {
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
-      {/* Animated Lines */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent">
+    <section className="py-20 bg-background relative overflow-hidden">
+      {/* Animated Line */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00bfff] to-transparent">
         <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{
@@ -25,10 +25,10 @@ export default function DecipheringAI() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"
+            className="text-4xl md:text-5xl font-bold text-foreground mb-8"
           >
             Deciphering{" "}
-            <span className="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent">
               Artificial Intelligence
             </span>
           </motion.h2>
@@ -38,7 +38,7 @@ export default function DecipheringAI() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-xl text-gray-600 leading-relaxed mb-8"
+            className="text-xl text-foreground/80 leading-relaxed mb-8"
           >
             At Brentwood Global, we&apos;re at the forefront of AI innovation,
             transforming complex algorithms into practical solutions that drive
@@ -51,7 +51,7 @@ export default function DecipheringAI() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-lg text-gray-600 leading-relaxed"
+            className="text-lg text-foreground/70 leading-relaxed"
           >
             We believe AI should be accessible, ethical, and transformative. Our
             team works closely with clients to identify opportunities where AI
@@ -71,7 +71,7 @@ export default function DecipheringAI() {
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "easeInOut",
               }}
-              className="absolute -top-8 left-1/4 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center"
+              className="absolute -top-8 left-1/4 w-16 h-16 bg-[#00f6ff]/10 rounded-full flex items-center justify-center"
             >
               <span className="text-2xl">🤖</span>
             </motion.div>
@@ -87,7 +87,7 @@ export default function DecipheringAI() {
                 ease: "easeInOut",
                 delay: 1,
               }}
-              className="absolute -top-4 right-1/4 w-12 h-12 bg-red-100 rounded-full flex items-center justify-center"
+              className="absolute -top-4 right-1/4 w-12 h-12 bg-[#00bfff]/10 rounded-full flex items-center justify-center"
             >
               <span className="text-xl">🧠</span>
             </motion.div>
@@ -103,7 +103,7 @@ export default function DecipheringAI() {
                 ease: "easeInOut",
                 delay: 2,
               }}
-              className="absolute top-4 left-1/3 w-10 h-10 bg-orange-200 rounded-full flex items-center justify-center"
+              className="absolute top-4 left-1/3 w-10 h-10 bg-[#007bff]/10 rounded-full flex items-center justify-center"
             >
               <span className="text-lg">⚡</span>
             </motion.div>

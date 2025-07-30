@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function AnimatedImageSection() {
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 bg-background relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
         <motion.div
@@ -16,7 +16,7 @@ export default function AnimatedImageSection() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="w-full h-full opacity-5 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%23FF7A00%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"
+          className="w-full h-full opacity-5 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fillRule=%22evenodd%22%3E%3Cg fill=%22%2300bfff%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"
         />
       </div>
 
@@ -29,7 +29,6 @@ export default function AnimatedImageSection() {
           className="max-w-4xl mx-auto"
         >
           <div className="relative">
-            {/* Main Image Container */}
             <motion.div
               whileHover={{
                 scale: 1.02,
@@ -43,12 +42,10 @@ export default function AnimatedImageSection() {
               }}
             >
               {/* Animated Tech Illustration */}
-              <div className="aspect-video bg-gradient-to-br from-orange-500 via-red-500 to-orange-600 flex items-center justify-center relative overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-[#00f6ff] via-[#00bfff] to-[#007bff] flex items-center justify-center relative overflow-hidden">
                 {/* Rotating Tech Elements */}
                 <motion.div
-                  animate={{
-                    rotate: [0, 360],
-                  }}
+                  animate={{ rotate: [0, 360] }}
                   transition={{
                     duration: 20,
                     repeat: Number.POSITIVE_INFINITY,
@@ -78,10 +75,10 @@ export default function AnimatedImageSection() {
                   <div className="text-8xl md:text-9xl text-white/90 mb-6">
                     💡
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                     Innovation Hub
                   </h3>
-                  <p className="text-white/80 text-lg">
+                  <p className="text-muted-foreground text-lg">
                     Where Ideas Come to Life
                   </p>
                 </motion.div>
@@ -133,11 +130,9 @@ export default function AnimatedImageSection() {
                 />
               </div>
 
-              {/* Animated Overlay Lines */}
+              {/* Overlay Lines */}
               <motion.div
-                animate={{
-                  x: ["-100%", "100%"],
-                }}
+                animate={{ x: ["-100%", "100%"] }}
                 transition={{
                   duration: 3,
                   repeat: Number.POSITIVE_INFINITY,
@@ -146,9 +141,7 @@ export default function AnimatedImageSection() {
                 className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/70 to-transparent"
               />
               <motion.div
-                animate={{
-                  x: ["100%", "-100%"],
-                }}
+                animate={{ x: ["100%", "-100%"] }}
                 transition={{
                   duration: 3,
                   repeat: Number.POSITIVE_INFINITY,
@@ -159,55 +152,43 @@ export default function AnimatedImageSection() {
               />
             </motion.div>
 
-            {/* Floating Decorative Elements */}
+            {/* Floating Elements & Accents */}
             <motion.div
-              animate={{
-                y: [0, -20, 0],
-                rotate: [0, 10, 0],
-              }}
+              animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
               transition={{
                 duration: 4,
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "easeInOut",
               }}
-              className="absolute -top-8 -right-8 w-16 h-16 bg-orange-400/20 rounded-full blur-xl"
+              className="absolute -top-8 -right-8 w-16 h-16 bg-[#00bfff]/20 rounded-full blur-xl"
             />
             <motion.div
-              animate={{
-                y: [0, 15, 0],
-                rotate: [0, -10, 0],
-              }}
+              animate={{ y: [0, 15, 0], rotate: [0, -10, 0] }}
               transition={{
                 duration: 5,
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "easeInOut",
                 delay: 1,
               }}
-              className="absolute -bottom-6 -left-6 w-12 h-12 bg-red-400/20 rounded-full blur-xl"
+              className="absolute -bottom-6 -left-6 w-12 h-12 bg-[#007bff]/20 rounded-full blur-xl"
             />
-
-            {/* Corner Accents */}
             <motion.div
-              animate={{
-                rotate: [0, 360],
-              }}
+              animate={{ rotate: [0, 360] }}
               transition={{
                 duration: 15,
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "linear",
               }}
-              className="absolute top-4 left-4 w-8 h-8 border-2 border-orange-300/50 rounded-full"
+              className="absolute top-4 left-4 w-8 h-8 border-2 border-[#00bfff]/50 rounded-full"
             />
             <motion.div
-              animate={{
-                rotate: [360, 0],
-              }}
+              animate={{ rotate: [360, 0] }}
               transition={{
                 duration: 12,
                 repeat: Number.POSITIVE_INFINITY,
                 ease: "linear",
               }}
-              className="absolute bottom-4 right-4 w-6 h-6 border-2 border-red-300/50 rounded-lg"
+              className="absolute bottom-4 right-4 w-6 h-6 border-2 border-[#007bff]/50 rounded-lg"
             />
           </div>
         </motion.div>

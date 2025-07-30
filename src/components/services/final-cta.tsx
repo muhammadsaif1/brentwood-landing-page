@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section className="py-32 relative overflow-hidden bg-background">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <motion.div
@@ -19,7 +19,7 @@ export default function FinalCTA() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "linear",
           }}
-          className="w-full h-full bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 bg-[length:200%_100%]"
+          className="w-full h-full bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-[length:200%_100%]"
         />
 
         {/* Pulsating Overlay */}
@@ -32,7 +32,7 @@ export default function FinalCTA() {
             repeat: Number.POSITIVE_INFINITY,
             ease: "easeInOut",
           }}
-          className="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-transparent to-red-400/20"
+          className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/20 via-transparent to-[#007bff]/20"
         />
 
         {/* Wave Effect */}
@@ -89,7 +89,7 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight"
           >
-            Ready to Build <span className="text-orange-200">With Us?</span>
+            Ready to Build <span className="text-[#00d4ff]">With Us?</span>
           </motion.h2>
 
           <motion.p
@@ -110,7 +110,7 @@ export default function FinalCTA() {
             viewport={{ once: true }}
           >
             <Link href="/contact">
-              <Button className="bg-white text-orange-600 hover:bg-gray-100 px-12 py-6 text-xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group relative overflow-hidden">
+              <Button className="bg-white text-[#007bff] hover:bg-gray-100 px-12 py-6 text-xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group relative overflow-hidden">
                 {/* Button Glow Effect */}
                 <motion.div
                   animate={{
@@ -137,7 +137,7 @@ export default function FinalCTA() {
                     opacity: [0.5, 0],
                   }}
                   transition={{ duration: 0.6 }}
-                  className="absolute inset-0 bg-orange-200 rounded-full"
+                  className="absolute inset-0 bg-[#00d4ff] rounded-full"
                 />
               </Button>
             </Link>
