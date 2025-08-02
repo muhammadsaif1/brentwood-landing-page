@@ -50,15 +50,14 @@ export default function FeatureTags() {
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -10, scale: 1.02 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-white/5 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden">
-                <CardContent className="p-8 text-center relative">
-                  {/* Hover Glow Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/0 to-[#007bff]/0 group-hover:from-[#00f6ff]/10 group-hover:to-[#007bff]/10 transition-all duration-300" />
+              <Card className="bg-white/5 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden relative">
+                {/* Hover Glow Overlay - moved to Card level */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/0 to-[#007bff]/0 group-hover:from-[#00f6ff]/10 group-hover:to-[#007bff]/10 transition-all duration-300" />
 
+                <CardContent className="p-8 text-center relative z-10">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}

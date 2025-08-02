@@ -6,16 +6,30 @@ import { ArrowRight, Play } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
-      {/* Animated Background Elements */}
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Video Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          {/* <source
+              src="https://videos.pexels.com/video-files/27936889/12266398_1920_1080_30fps.mp4"
+              type="video/mp4"
+            /> */}
+          {/* Fallback for browsers that don't support video */}
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+      {/* Grid Pattern Overlay (optional - you can remove this if you don't want it) */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-30"></div>
 
       <div className="relative z-10 container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-6xl mx-auto text-center">
@@ -33,7 +47,15 @@ export default function HeroSection() {
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight"
             >
               BRENTWOOD
-              <span className="block bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+              {/* needs to be inspected later */}
+              <span
+                className="block bg-clip-text text-transparent"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to left, rgb(184, 150, 255), rgb(0, 246, 255), rgb(0, 255, 240))",
+                }}
+              >
+                {" "}
                 GLOBAL
               </span>
             </motion.h1>
@@ -77,50 +99,8 @@ export default function HeroSection() {
               Watch Demo
             </Button>
           </motion.div>
-
-          {/* Stats Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-          >
-            {[
-              { number: "500+", label: "Projects Completed" },
-              { number: "50+", label: "Happy Clients" },
-              { number: "10+", label: "Years Experience" },
-              { number: "24/7", label: "Support Available" },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-400 text-sm md:text-base">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-bounce"></div>
-        </div>
-      </motion.div>
     </section>
   );
 }

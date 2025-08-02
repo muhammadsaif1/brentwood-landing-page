@@ -2,10 +2,105 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Pause, Play } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+
+// Define YouTube Iframe API types
+interface YouTubePlayer {
+  playVideo: () => void;
+  pauseVideo: () => void;
+}
+
+interface YouTubeWindow extends Window {
+  YT: {
+    Player: new (
+      id: string,
+      options: {
+        events: {
+          onStateChange: (event: { data: number }) => void;
+        };
+      }
+    ) => YouTubePlayer;
+    PlayerState: {
+      PLAYING: number;
+      PAUSED: number;
+      ENDED: number;
+    };
+  };
+  onYouTubeIframeAPIReady?: () => void;
+}
+
+declare const window: YouTubeWindow;
 
 export default function GetToKnowUs() {
+  const playerRef = useRef<YouTubePlayer | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showButton, setShowButton] = useState(true);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Load YouTube Iframe API
+  useEffect(() => {
+    // Check if API is already loaded to prevent duplicate scripts
+    if (typeof window.YT !== "undefined" && window.YT.Player) {
+      initializePlayer();
+      return;
+    }
+
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag?.parentNode?.insertBefore(tag, firstScriptTag);
+
+    window.onYouTubeIframeAPIReady = initializePlayer;
+
+    function initializePlayer() {
+      if (!window.YT?.Player) return;
+
+      playerRef.current = new window.YT.Player("youtube-player", {
+        events: {
+          onStateChange: (event) => {
+            if (event.data === window.YT.PlayerState.PLAYING) {
+              setIsPlaying(true);
+              // Hide button after 2 seconds
+              timeoutRef.current = setTimeout(() => {
+                setShowButton(false);
+              }, 2000);
+            } else if (
+              event.data === window.YT.PlayerState.PAUSED ||
+              event.data === window.YT.PlayerState.ENDED
+            ) {
+              setIsPlaying(false);
+              setShowButton(true);
+              if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+              }
+            }
+          },
+        },
+      });
+    }
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+      // Clean up global handler
+      delete window.onYouTubeIframeAPIReady;
+    };
+  }, []);
+
+  // Handle play/pause toggle
+  const handleTogglePlay = () => {
+    if (playerRef.current) {
+      if (isPlaying) {
+        playerRef.current.pauseVideo();
+      } else {
+        playerRef.current.playVideo();
+      }
+    }
+  };
+
   return (
     <section className="py-20 bg-background text-foreground">
       <div className="container mx-auto px-4">
@@ -81,9 +176,19 @@ export default function GetToKnowUs() {
             viewport={{ once: true }}
             className="relative overflow-hidden"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-              {/* Video Placeholder with Animated Background */}
-              <div className="aspect-video bg-gradient-to-br from-[#00f6ff] to-[#007bff] flex items-center justify-center relative overflow-hidden">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl group m-0 p-0">
+              {/* YouTube Video */}
+              <div className="aspect-video relative">
+                <iframe
+                  id="youtube-player"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=1&enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+                  title="Brentwood Global Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                  className="w-full h-full object-cover m-0 border-none"
+                />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#00f6ff]/20 to-[#007bff]/20 pointer-events-none" />
+
                 {/* Animated Gradient Circles */}
                 <motion.div
                   animate={{
@@ -95,7 +200,7 @@ export default function GetToKnowUs() {
                     repeat: Infinity,
                     ease: "linear",
                   }}
-                  className="absolute top-10 left-10 w-20 h-20 bg-white/20 rounded-full blur-sm"
+                  className="absolute top-10 left-10 w-20 h-20 bg-white/20 rounded-full blur-sm pointer-events-none"
                 />
                 <motion.div
                   animate={{
@@ -107,27 +212,34 @@ export default function GetToKnowUs() {
                     repeat: Infinity,
                     ease: "linear",
                   }}
-                  className="absolute bottom-10 right-10 w-16 h-16 bg-white/20 rounded-full blur-sm"
+                  className="absolute bottom-10 right-10 w-16 h-16 bg-white/20 rounded-full blur-sm pointer-events-none"
                 />
 
-                {/* Play Button */}
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer group-hover:bg-white/30 transition-all duration-300"
-                >
-                  <div className="w-0 h-0 border-l-[20px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1" />
-                </motion.div>
+                {/* Play/Pause Button */}
+                {showButton && (
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={handleTogglePlay}
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer group-hover:bg-white/30 transition-all duration-300"
+                  >
+                    {isPlaying ? (
+                      <Pause className="w-8 h-8 text-white" />
+                    ) : (
+                      <Play className="w-8 h-8 text-white" />
+                    )}
+                  </motion.div>
+                )}
 
                 {/* Overlay Text */}
-                <div className="absolute bottom-6 left-6 text-white">
+                <div className="absolute bottom-6 left-6 text-white pointer-events-none">
                   <h3 className="text-xl font-bold">Brentwood Global</h3>
                   <p className="text-white/80">Innovation in Action</p>
                 </div>
               </div>
 
               {/* Hover Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/20 to-[#007bff]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/20 to-[#007bff]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </div>
 
             {/* Floating Gradient Orbs */}

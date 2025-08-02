@@ -5,14 +5,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
+interface BlogPost {
+  title: string;
+  summary: string;
+  thumbnail: string;
+  author: string;
+  date: string;
+  category: string;
+  slug: string;
+}
 
 export default function BlogHighlights() {
-  const blogPosts = [
+  const blogPosts: BlogPost[] = [
     {
       title: "The Future of AI in Business Automation",
       summary:
         "Explore how artificial intelligence is revolutionizing business processes and driving efficiency across industries.",
-      thumbnail: "/placeholder.svg?height=250&width=400",
+      thumbnail:
+        "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
       author: "Sarah Johnson",
       date: "Dec 15, 2024",
       category: "Artificial Intelligence",
@@ -22,7 +34,8 @@ export default function BlogHighlights() {
       title: "Blockchain Beyond Cryptocurrency",
       summary:
         "Discover the innovative applications of blockchain technology in supply chain, healthcare, and digital identity.",
-      thumbnail: "/placeholder.svg?height=250&width=400",
+      thumbnail:
+        "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg",
       author: "Michael Chen",
       date: "Dec 12, 2024",
       category: "Blockchain",
@@ -32,7 +45,8 @@ export default function BlogHighlights() {
       title: "Building Scalable Web Applications",
       summary:
         "Best practices and modern frameworks for developing web applications that can handle millions of users.",
-      thumbnail: "/placeholder.svg?height=250&width=400",
+      thumbnail:
+        "https://images.pexels.com/photos/3693732/pexels-photo-3693732.jpeg",
       author: "David Kim",
       date: "Dec 10, 2024",
       category: "Web Development",
@@ -42,7 +56,8 @@ export default function BlogHighlights() {
       title: "The Rise of Progressive Web Apps",
       summary:
         "How PWAs are bridging the gap between web and mobile applications, offering native-like experiences.",
-      thumbnail: "/placeholder.svg?height=250&width=400",
+      thumbnail:
+        "https://images.pexels.com/photos/7567591/pexels-photo-7567591.jpeg",
       author: "Emily Rodriguez",
       date: "Dec 8, 2024",
       category: "Mobile Development",
@@ -51,7 +66,7 @@ export default function BlogHighlights() {
   ];
 
   return (
-    <section className="py-20  bg-background text-foreground">
+    <section className="py-20 bg-background text-foreground">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -83,17 +98,24 @@ export default function BlogHighlights() {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
-                <CardContent className="p-0">
+              <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full m-0 p-0">
+                <CardContent className="p-0 m-0">
                   {/* Thumbnail */}
-                  <div className="relative overflow-hidden">
-                    <motion.img
+                  <div className="relative overflow-hidden aspect-[4/3] m-0">
+                    <motion.div
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
-                      src={post.thumbnail}
-                      alt={post.title}
-                      className="w-full h-48 object-cover"
-                    />
+                    >
+                      <Image
+                        src={post.thumbnail}
+                        alt={post.title}
+                        width={450}
+                        height={281}
+                        className="w-full h-full object-cover m-0"
+                        priority={index === 0}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      />
+                    </motion.div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                     {/* Category Badge */}
@@ -105,7 +127,7 @@ export default function BlogHighlights() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-6 flex flex-col h-full">
+                  <div className="pt-3 px-6 pb-6 flex flex-col h-full">
                     <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#007bff] transition-colors line-clamp-2">
                       {post.title}
                     </h3>

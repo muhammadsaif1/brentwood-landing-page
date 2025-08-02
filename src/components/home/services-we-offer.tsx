@@ -17,14 +17,46 @@ import {
 
 export default function ServicesWeOffer() {
   const services = [
-    { icon: Code, title: "Web Development", color: "text-blue-500" },
-    { icon: Smartphone, title: "Mobile Apps", color: "text-green-500" },
-    { icon: Brain, title: "AI Solutions", color: "text-purple-500" },
-    { icon: Shield, title: "Cybersecurity", color: "text-red-500" },
-    { icon: Cloud, title: "Cloud Services", color: "text-cyan-500" },
-    { icon: Palette, title: "UI/UX Design", color: "text-pink-500" },
-    { icon: BarChart3, title: "Data Analytics", color: "text-yellow-500" },
-    { icon: Gamepad2, title: "Game Development", color: "text-indigo-500" },
+    {
+      icon: Code,
+      title: "Web Development",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Apps",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
+    },
+    {
+      icon: Brain,
+      title: "AI Solutions",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Services",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
+    },
+    {
+      icon: Palette,
+      title: "UI/UX Design",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
+    },
+    {
+      icon: BarChart3,
+      title: "Data Analytics",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
+    },
+    {
+      icon: Gamepad2,
+      title: "Game Development",
+      gradient: "from-[#00f6ff] to-[#00bfff]",
+    },
   ];
 
   return (
@@ -73,30 +105,28 @@ export default function ServicesWeOffer() {
               className="group"
             >
               <Card className="bg-background border border-white/10 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden relative">
-                <CardContent className="p-8 text-center relative">
-                  {/* Hover Overlay */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute inset-0 bg-gradient-to-br from-[#00f6ff]/90 to-[#007bff]/90 flex items-center justify-center z-10"
-                  >
-                    <Link href="/contact">
-                      <Button className="bg-white text-[#00bfff] hover:bg-gray-100 font-semibold px-6 py-2 rounded-full transform hover:scale-105 transition-all duration-300">
-                        Get a Quote
-                      </Button>
-                    </Link>
-                  </motion.div>
+                {/* Hover Overlay - moved to Card level */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute inset-0 bg-gradient-to-br from-[#00f6ff]/90 to-[#007bff]/90 flex items-center justify-center z-10"
+                >
+                  <Link href="/contact">
+                    <Button className="bg-white text-[#00bfff] hover:bg-gray-100 font-semibold px-6 py-2 rounded-full transform hover:scale-105 transition-all duration-300">
+                      Get a Quote
+                    </Button>
+                  </Link>
+                </motion.div>
 
+                <CardContent className="p-8 text-center relative z-0">
                   {/* Default Content */}
                   <motion.div
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
-                    className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-foreground/5 flex items-center justify-center group-hover:bg-white/20 transition-all duration-300"
+                    className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${service.gradient} flex items-center justify-center shadow-lg`}
                   >
-                    <service.icon
-                      className={`w-8 h-8 ${service.color} group-hover:text-white transition-colors duration-300`}
-                    />
+                    <service.icon className="w-8 h-8 text-white" />
                   </motion.div>
 
                   <h3 className="text-lg font-bold text-foreground group-hover:text-white transition-colors duration-300">

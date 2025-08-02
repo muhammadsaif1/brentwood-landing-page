@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, User } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function Testimonials() {
@@ -12,7 +12,6 @@ export default function Testimonials() {
     {
       name: "Alex Thompson",
       role: "CEO, TechStart Inc.",
-      avatar: "/placeholder.svg?height=80&width=80",
       content:
         "Brentwood Global transformed our digital presence completely. Their AI solutions increased our efficiency by 300% and their team's expertise is unmatched.",
       rating: 5,
@@ -20,7 +19,6 @@ export default function Testimonials() {
     {
       name: "Maria Garcia",
       role: "CTO, InnovateCorp",
-      avatar: "/placeholder.svg?height=80&width=80",
       content:
         "The blockchain solution they developed for us revolutionized our supply chain. Professional, innovative, and delivered on time. Highly recommended!",
       rating: 5,
@@ -28,7 +26,6 @@ export default function Testimonials() {
     {
       name: "John Smith",
       role: "Founder, StartupXYZ",
-      avatar: "/placeholder.svg?height=80&width=80",
       content:
         "From concept to deployment, Brentwood Global exceeded our expectations. Their web development team created exactly what we envisioned and more.",
       rating: 5,
@@ -36,7 +33,6 @@ export default function Testimonials() {
     {
       name: "Sarah Lee",
       role: "Director, GlobalTech",
-      avatar: "/placeholder.svg?height=80&width=80",
       content:
         "Outstanding mobile app development! The user experience is seamless and the performance is exceptional. Our users love the new app.",
       rating: 5,
@@ -124,11 +120,13 @@ export default function Testimonials() {
                         viewport={{ once: true }}
                         className="flex items-center justify-center space-x-4"
                       >
-                        <img
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          className="w-16 h-16 rounded-full object-cover border-4 border-[#00bfff]/30"
-                        />
+                        {/* Avatar Icon */}
+                        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-[#00f6ff] to-[#007bff] flex items-center justify-center shadow-lg ring-4 ring-[#00bfff]/20">
+                          <User
+                            className="w-7 h-7 text-white"
+                            strokeWidth={1.5}
+                          />
+                        </div>
                         <div className="text-left">
                           <h4 className="text-lg font-bold text-foreground">
                             {testimonial.name}

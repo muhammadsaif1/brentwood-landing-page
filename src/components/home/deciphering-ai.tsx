@@ -58,56 +58,6 @@ export default function DecipheringAI() {
             can create meaningful impact, from automating routine tasks to
             uncovering insights that drive strategic decisions.
           </motion.p>
-
-          {/* Floating AI Elements */}
-          <div className="relative mt-16">
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-                rotate: [0, 5, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-              className="absolute -top-8 left-1/4 w-16 h-16 bg-[#00f6ff]/10 rounded-full flex items-center justify-center"
-            >
-              <span className="text-2xl">🤖</span>
-            </motion.div>
-
-            <motion.div
-              animate={{
-                y: [0, 15, 0],
-                rotate: [0, -5, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-                delay: 1,
-              }}
-              className="absolute -top-4 right-1/4 w-12 h-12 bg-[#00bfff]/10 rounded-full flex items-center justify-center"
-            >
-              <span className="text-xl">🧠</span>
-            </motion.div>
-
-            <motion.div
-              animate={{
-                y: [0, -10, 0],
-                rotate: [0, 3, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-                delay: 2,
-              }}
-              className="absolute top-4 left-1/3 w-10 h-10 bg-[#007bff]/10 rounded-full flex items-center justify-center"
-            >
-              <span className="text-lg">⚡</span>
-            </motion.div>
-          </div>
         </div>
       </div>
     </section>

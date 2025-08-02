@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "lucide-react";
 
 export default function BlockchainFever() {
   const [activeTab, setActiveTab] = useState(0);
@@ -191,7 +192,7 @@ export default function BlockchainFever() {
                   className="w-80 h-80 mx-auto bg-gradient-to-r from-[#00f6ff]/20 to-[#007bff]/20 rounded-full flex items-center justify-center"
                 >
                   <div className="w-60 h-60 bg-gradient-to-r from-[#00f6ff]/30 to-[#007bff]/30 rounded-full flex items-center justify-center">
-                    <div className="text-6xl">⛓️</div>
+                    <Link className="w-24 h-24 text-white" strokeWidth={1.5} />
                   </div>
                 </motion.div>
               </div>

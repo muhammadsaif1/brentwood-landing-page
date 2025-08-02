@@ -80,11 +80,11 @@ export default function IoTSection() {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-white/5 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
-                <CardContent className="p-8 text-center relative">
-                  {/* Hover Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/0 to-[#007bff]/0 group-hover:from-[#00f6ff]/10 group-hover:to-[#007bff]/10 transition-all duration-300" />
+              <Card className="bg-white/5 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full relative group">
+                {/* Hover Glow - moved to Card level */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/0 to-[#007bff]/0 group-hover:from-[#00f6ff]/10 group-hover:to-[#007bff]/10 transition-all duration-300" />
 
+                <CardContent className="p-8 text-center relative z-10">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
