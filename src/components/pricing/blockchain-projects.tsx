@@ -91,7 +91,7 @@ export default function BlockchainProjects() {
                 transformStyle: "preserve-3d",
               }}
             >
-              <Card className="bg-background border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
+              <Card className="bg-background border-[#00f6ff]/20 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full p-0">
                 <CardContent className="p-0">
                   {/* Project Image */}
                   <div className="relative overflow-hidden">

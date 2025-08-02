@@ -11,28 +11,31 @@ export default function AIProjectsSection() {
       title: "Intelligent Automation",
       description:
         "Streamline workflows with AI-powered process automation that learns and adapts to your business needs.",
-      image: "/placeholder.svg?height=200&width=300&text=AI+Automation",
+      image:
+        "https://images.pexels.com/photos/8294560/pexels-photo-8294560.jpeg",
     },
     {
       icon: BarChart3,
       title: "Predictive Analytics",
       description:
         "Harness the power of machine learning to forecast trends and make data-driven decisions.",
-      image: "/placeholder.svg?height=200&width=300&text=Predictive+Analytics",
+      image:
+        "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg",
     },
     {
       icon: Zap,
       title: "Smart Recommendations",
       description:
         "Deliver personalized experiences with AI recommendation engines that boost engagement.",
-      image: "/placeholder.svg?height=200&width=300&text=Smart+Recommendations",
+      image:
+        "https://images.pexels.com/photos/4476623/pexels-photo-4476623.jpeg",
     },
     {
       icon: Target,
       title: "Computer Vision",
       description:
         "Transform visual data into actionable insights with advanced image recognition technology.",
-      image: "/placeholder.svg?height=200&width=300&text=Computer+Vision",
+      image: "https://images.pexels.com/photos/752525/pexels-photo-752525.jpeg",
     },
   ];
 
@@ -84,8 +87,8 @@ export default function AIProjectsSection() {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
-                <CardContent className="p-0">
+              <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full  p-0">
+                <CardContent className="p-0 ">
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
                     <motion.img
