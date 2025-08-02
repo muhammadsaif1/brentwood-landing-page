@@ -4,7 +4,6 @@ import AnimatedTextHighlight from "@/components/portfolio/animated-text-highligh
 import InteractiveFilterTabs from "@/components/portfolio/interactive-filter-tabs";
 import PartnershipTextBlock from "@/components/portfolio/partnership-text-block";
 import TechnologiesSection from "@/components/portfolio/technologies-section";
-import AnimatedImageSection from "@/components/portfolio/animated-image-section";
 import FinalCTA from "@/components/services/final-cta";
 
 export default function PortfolioPage() {
@@ -19,7 +18,6 @@ export default function PortfolioPage() {
       <InteractiveFilterTabs />
       <PartnershipTextBlock />
       <TechnologiesSection />
-      <AnimatedImageSection />
       <FinalCTA />
     </div>
   );

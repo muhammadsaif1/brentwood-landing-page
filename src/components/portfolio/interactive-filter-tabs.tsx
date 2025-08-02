@@ -244,7 +244,7 @@ export default function InteractiveFilterTabs() {
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 relative ${
                 activeTab === tab
                   ? "bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] text-white shadow-lg"
-                  : "text-muted-foreground hover:text-foreground hover:bg-white/50"
+                  : "text-muted-foreground hover:text-[#007bff] hover:bg-white/20"
               }`}
             >
               {tab}
@@ -274,7 +274,7 @@ export default function InteractiveFilterTabs() {
               animate={{ opacity: 1, y: 0 }}
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#00bfff]"
             >
               <div className="relative overflow-hidden">
                 <motion.img
@@ -282,6 +282,8 @@ export default function InteractiveFilterTabs() {
                   transition={{ duration: 0.5 }}
                   src={project.image}
                   alt={project.title}
+                  width="400"
+                  height="300"
                   className="w-full h-64 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

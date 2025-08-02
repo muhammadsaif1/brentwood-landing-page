@@ -140,7 +140,7 @@ export default function PortfolioTiles() {
               viewport={{ once: true }}
               onMouseEnter={() => setHoveredTile(index)}
               onMouseLeave={() => setHoveredTile(null)}
-              className={`relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ${
+              className={`relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#00bfff] ${
                 index % 7 === 0 || index % 7 === 3
                   ? "md:col-span-2 md:row-span-2"
                   : ""
