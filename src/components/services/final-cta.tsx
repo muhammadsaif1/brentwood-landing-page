@@ -66,7 +66,7 @@ export default function FinalCTA() {
             ease: "easeInOut",
             delay: i * 0.5,
           }}
-          className="absolute w-2 h-2 bg-white rounded-full"
+          className="absolute w-2 h-2 bg-[#00f6ff] rounded-full"
           style={{
             left: `${10 + i * 10}%`,
             top: `${20 + (i % 3) * 30}%`,
@@ -87,9 +87,9 @@ export default function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight"
+            className="text-5xl md:text-7xl font-bold text-white/90 mb-8 leading-tight"
           >
-            Ready to Build <span className="text-[#00d4ff]">With Us?</span>
+            Ready to Build <span className="text-black">With Us?</span>
           </motion.h2>
 
           <motion.p
@@ -110,7 +110,7 @@ export default function FinalCTA() {
             viewport={{ once: true }}
           >
             <Link href="/contact">
-              <Button className="bg-white text-[#007bff] hover:bg-gray-100 px-12 py-6 text-xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group relative overflow-hidden">
+              <Button className="bg-[#007bff] text-white hover:bg-[#00bfff] px-12 py-6 text-xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group relative overflow-hidden">
                 {/* Button Glow Effect */}
                 <motion.div
                   animate={{
@@ -122,7 +122,7 @@ export default function FinalCTA() {
                     repeat: Number.POSITIVE_INFINITY,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 bg-white rounded-full"
+                  className="absolute inset-0 bg-[#00f6ff]/30 rounded-full"
                 />
 
                 <span className="relative z-10 flex items-center">
@@ -137,7 +137,7 @@ export default function FinalCTA() {
                     opacity: [0.5, 0],
                   }}
                   transition={{ duration: 0.6 }}
-                  className="absolute inset-0 bg-[#00d4ff] rounded-full"
+                  className="absolute inset-0 bg-[#00f6ff] rounded-full"
                 />
               </Button>
             </Link>
@@ -153,7 +153,7 @@ export default function FinalCTA() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "linear",
             }}
-            className="absolute top-20 left-20 w-16 h-16 border-2 border-white/20 rounded-full"
+            className="absolute top-20 left-20 w-16 h-16 border-2 border-[#00f6ff]/30 rounded-full"
           />
           <motion.div
             animate={{
@@ -164,7 +164,7 @@ export default function FinalCTA() {
               repeat: Number.POSITIVE_INFINITY,
               ease: "linear",
             }}
-            className="absolute bottom-20 right-20 w-12 h-12 border-2 border-white/20 rounded-lg"
+            className="absolute bottom-20 right-20 w-12 h-12 border-2 border-[#00f6ff]/30 rounded-lg"
           />
         </motion.div>
       </div>

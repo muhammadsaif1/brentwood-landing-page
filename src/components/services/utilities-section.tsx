@@ -1,8 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  Activity,
+  Zap,
+  Shield,
+  Database,
+  Wrench,
+  RefreshCw,
+} from "lucide-react";
 
 export default function UtilitiesSection() {
+  const utilities = [
+    {
+      title: "24/7 Monitoring",
+      description:
+        "Continuous system monitoring and alerting to prevent downtime.",
+      icon: <Activity className="text-white w-8 h-8" />,
+    },
+    {
+      title: "Performance Optimization",
+      description:
+        "Speed and efficiency improvements for better user experience.",
+      icon: <Zap className="text-white w-8 h-8" />,
+    },
+    {
+      title: "Security Audits",
+      description: "Regular security assessments and vulnerability testing.",
+      icon: <Shield className="text-white w-8 h-8" />,
+    },
+    {
+      title: "Backup & Recovery",
+      description: "Automated backup solutions and disaster recovery planning.",
+      icon: <Database className="text-white w-8 h-8" />,
+    },
+    {
+      title: "Technical Support",
+      description: "Expert technical assistance whenever you need it.",
+      icon: <Wrench className="text-white w-8 h-8" />,
+    },
+    {
+      title: "System Updates",
+      description: "Regular updates and patches to keep systems current.",
+      icon: <RefreshCw className="text-white w-8 h-8" />,
+    },
+  ];
+
   return (
     <section className="py-20 bg-background relative overflow-hidden">
       {/* Top Animated Line */}
@@ -53,43 +96,7 @@ export default function UtilitiesSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "24/7 Monitoring",
-              description:
-                "Continuous system monitoring and alerting to prevent downtime.",
-              icon: "📊",
-            },
-            {
-              title: "Performance Optimization",
-              description:
-                "Speed and efficiency improvements for better user experience.",
-              icon: "⚡",
-            },
-            {
-              title: "Security Audits",
-              description:
-                "Regular security assessments and vulnerability testing.",
-              icon: "🔍",
-            },
-            {
-              title: "Backup & Recovery",
-              description:
-                "Automated backup solutions and disaster recovery planning.",
-              icon: "💾",
-            },
-            {
-              title: "Technical Support",
-              description: "Expert technical assistance whenever you need it.",
-              icon: "🛠️",
-            },
-            {
-              title: "System Updates",
-              description:
-                "Regular updates and patches to keep systems current.",
-              icon: "🔄",
-            },
-          ].map((utility, index) => (
+          {utilities.map((utility, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
@@ -97,7 +104,7 @@ export default function UtilitiesSection() {
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-background p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group"
+              className="bg-background p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-[#00bfff]"
             >
               <motion.div
                 animate={{
@@ -109,9 +116,11 @@ export default function UtilitiesSection() {
                   ease: "easeInOut",
                   delay: index * 0.5,
                 }}
-                className="text-4xl mb-4 text-center"
+                className="flex justify-center items-center mb-4"
               >
-                {utility.icon}
+                <div className="bg-[#00bfff] p-2 rounded-full">
+                  {utility.icon}
+                </div>
               </motion.div>
               <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-[#00bfff] transition-colors">
                 {utility.title}

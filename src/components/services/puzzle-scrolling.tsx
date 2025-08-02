@@ -2,21 +2,71 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import {
+  Globe,
+  Bot,
+  Link,
+  Smartphone,
+  Cloud,
+  Lock,
+  BarChart,
+  Megaphone,
+  Palette,
+  GitBranch,
+  Wifi,
+  Brain,
+} from "lucide-react";
 
 export default function PuzzleScrolling() {
   const services = [
-    "Web Development",
-    "AI Automation",
-    "Blockchain Integration",
-    "Mobile Applications",
-    "Cloud Computing",
-    "Cybersecurity",
-    "Data Analytics",
-    "Digital Marketing",
-    "UI/UX Design",
-    "DevOps Solutions",
-    "IoT Development",
-    "Machine Learning",
+    {
+      name: "Web Development",
+      icon: <Globe className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "AI Automation",
+      icon: <Bot className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "Blockchain Integration",
+      icon: <Link className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "Mobile Applications",
+      icon: <Smartphone className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "Cloud Computing",
+      icon: <Cloud className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "Cybersecurity",
+      icon: <Lock className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "Data Analytics",
+      icon: <BarChart className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "Digital Marketing",
+      icon: <Megaphone className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "UI/UX Design",
+      icon: <Palette className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "DevOps Solutions",
+      icon: <GitBranch className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "IoT Development",
+      icon: <Wifi className="text-white w-8 h-8 mb-4" />,
+    },
+    {
+      name: "Machine Learning",
+      icon: <Brain className="text-white w-8 h-8 mb-4" />,
+    },
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -83,25 +133,15 @@ export default function PuzzleScrolling() {
                       ease: "easeInOut",
                       delay: index * 0.2,
                     }}
-                    className="text-4xl mb-4"
+                    className="flex justify-center items-center"
                   >
-                    {index % 6 === 0
-                      ? "🌐"
-                      : index % 6 === 1
-                        ? "🤖"
-                        : index % 6 === 2
-                          ? "⛓️"
-                          : index % 6 === 3
-                            ? "📱"
-                            : index % 6 === 4
-                              ? "☁️"
-                              : "🔒"}
+                    {service.icon}
                   </motion.div>
                   <h3 className="text-xl font-bold text-white mb-2">
-                    {service}
+                    {service.name}
                   </h3>
                   <p className="text-white/80 text-sm">
-                    Professional {service.toLowerCase()} solutions
+                    Professional {service.name.toLowerCase()} solutions
                   </p>
                 </div>
 

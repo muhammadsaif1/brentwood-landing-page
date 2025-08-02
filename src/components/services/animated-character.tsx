@@ -1,8 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 export default function AnimatedCharacter() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -76,7 +80,7 @@ export default function AnimatedCharacter() {
             </motion.div>
           </motion.div>
 
-          {/* Right Animation */}
+          {/* Right Video */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -85,106 +89,55 @@ export default function AnimatedCharacter() {
             className="relative"
           >
             <div className="relative h-96 bg-gradient-to-br from-[#00f6ff]/10 to-[#007bff]/10 rounded-3xl overflow-hidden">
-              {/* Rocket */}
+              {/* Video */}
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                onCanPlay={() => setIsLoading(false)}
+                onError={() => setIsLoading(false)}
+                className="w-full h-full object-cover"
+              >
+                <source
+                  src="https://videos.pexels.com/video-files/29306492/12637575_1920_1080_30fps.mp4"
+                  type="video/mp4"
+                />
+              </video>
+
+              {/* Loader */}
+              {isLoading && (
+                <div className="absolute inset-0 flex justify-center items-center bg-black/30">
+                  <Loader2 className="w-12 h-12 text-[#00bfff] animate-spin" />
+                </div>
+              )}
+
+              {/* Decorative Blobs */}
               <motion.div
-                animate={{ y: [0, -20, 0] }}
+                animate={{
+                  y: [0, -20, 0],
+                  rotate: [0, 5, 0],
+                }}
                 transition={{
                   duration: 4,
                   repeat: Number.POSITIVE_INFINITY,
                   ease: "easeInOut",
                 }}
-                className="absolute left-1/2 transform -translate-x-1/2 top-8"
-              >
-                <div className="text-8xl">🚀</div>
-              </motion.div>
-
-              {/* Person */}
+                className="absolute -top-6 -right-6 w-12 h-12 bg-[#00bfff] rounded-full opacity-20 blur-sm"
+              />
               <motion.div
-                animate={{ y: [0, 300, 0] }}
+                animate={{
+                  y: [0, 15, 0],
+                  rotate: [0, -5, 0],
+                }}
                 transition={{
-                  duration: 8,
+                  duration: 5,
                   repeat: Number.POSITIVE_INFINITY,
                   ease: "easeInOut",
                 }}
-                className="absolute right-8 top-8"
-              >
-                <div className="text-6xl">🧑‍💻</div>
-              </motion.div>
-
-              {/* Floating Dots */}
-              {[...Array(6)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  animate={{
-                    y: [0, -30, 0],
-                    x: [0, Math.sin(i) * 20, 0],
-                    rotate: [0, 360],
-                  }}
-                  transition={{
-                    duration: 3 + i * 0.5,
-                    repeat: Number.POSITIVE_INFINITY,
-                    ease: "easeInOut",
-                    delay: i * 0.5,
-                  }}
-                  className="absolute w-4 h-4 bg-[#00bfff] rounded-full opacity-60"
-                  style={{
-                    left: `${20 + i * 10}%`,
-                    top: `${20 + (i % 3) * 25}%`,
-                  }}
-                />
-              ))}
-
-              {/* Tech Icons */}
-              <motion.div
-                animate={{ rotate: [0, 360] }}
-                transition={{
-                  duration: 20,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "linear",
-                }}
-                className="absolute bottom-8 left-8 text-4xl"
-              >
-                ⚙️
-              </motion.div>
-
-              <motion.div
-                animate={{ rotate: [360, 0] }}
-                transition={{
-                  duration: 15,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "linear",
-                }}
-                className="absolute top-1/2 left-8 text-3xl"
-              >
-                💡
-              </motion.div>
+                className="absolute -bottom-4 -left-4 w-8 h-8 bg-[#007bff] rounded-full opacity-30 blur-sm"
+              />
             </div>
-
-            {/* Decorative Blobs */}
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-                rotate: [0, 5, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-              className="absolute -top-6 -right-6 w-12 h-12 bg-[#00bfff] rounded-full opacity-20 blur-sm"
-            />
-            <motion.div
-              animate={{
-                y: [0, 15, 0],
-                rotate: [0, -5, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-              className="absolute -bottom-4 -left-4 w-8 h-8 bg-[#007bff] rounded-full opacity-30 blur-sm"
-            />
           </motion.div>
         </div>
       </div>

@@ -182,45 +182,6 @@ export default function PageHero({ title, description }: PageHeroProps) {
         </motion.div>
 
         {/* Scroll Indicator - EPAM Style */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{
-              duration: 2,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "easeInOut",
-            }}
-            className="flex flex-col items-center space-y-2"
-          >
-            <div className="w-6 h-10 border-2 border-blue-400/60 rounded-full flex justify-center relative overflow-hidden">
-              <motion.div
-                animate={{ y: [0, 16, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                }}
-                className="w-1 h-3 bg-gradient-to-b from-blue-400 to-cyan-400 rounded-full mt-2"
-              />
-            </div>
-            <motion.p
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{
-                duration: 2,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-              className="text-blue-300 text-sm font-light tracking-wider"
-            >
-              SCROLL
-            </motion.p>
-          </motion.div>
-        </motion.div>
       </div>
 
       {/* Bottom Gradient Fade */}

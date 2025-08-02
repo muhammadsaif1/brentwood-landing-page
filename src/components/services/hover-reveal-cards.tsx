@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function HoverRevealCards() {
@@ -11,37 +12,39 @@ export default function HoverRevealCards() {
       title: "Cybersecurity",
       description:
         "Advanced security solutions to protect your digital assets and infrastructure.",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg",
     },
     {
       title: "Cloud Integration",
       description:
         "Seamless cloud migration and integration services for scalable solutions.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg",
     },
     {
       title: "Data Analytics",
       description:
         "Transform your data into actionable insights with advanced analytics.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg",
     },
     {
       title: "AI Development",
       description:
         "Custom artificial intelligence solutions to automate and optimize processes.",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
     },
     {
       title: "Mobile Solutions",
       description:
         "Native and cross-platform mobile applications for iOS and Android.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg",
     },
     {
       title: "Blockchain",
       description:
         "Decentralized solutions and smart contract development services.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg",
     },
   ];
 
@@ -78,13 +81,15 @@ export default function HoverRevealCards() {
               viewport={{ once: true }}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
-              className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500"
+              className="relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#00bfff]"
             >
               {/* Background Image */}
               <div className="absolute inset-0">
-                <img
-                  src={service.image || "/placeholder.svg"}
+                <Image
+                  src={service.image}
                   alt={service.title}
+                  width="600"
+                  height="400"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />

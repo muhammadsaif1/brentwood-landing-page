@@ -1,6 +1,5 @@
 import PageHero from "@/components/common/page-hero";
 import AnimatedTextBlock from "@/components/services/animated-text-block";
-import AnimatedImageDisplay from "@/components/services/animated-image-display";
 import PuzzleScrolling from "@/components/services/puzzle-scrolling";
 import UtilitiesSection from "@/components/services/utilities-section";
 import HoverRevealCards from "@/components/services/hover-reveal-cards";
@@ -15,7 +14,6 @@ export default function ServicesPage() {
         description="Explore how Brentwood Global helps you scale with innovative digital services designed for impact."
       />
       <AnimatedTextBlock text="We Deliver Value Through Strategy, Innovation, and Execution." />
-      <AnimatedImageDisplay />
       <PuzzleScrolling />
       <UtilitiesSection />
       <HoverRevealCards />
