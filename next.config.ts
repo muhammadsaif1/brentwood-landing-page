@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     domains: ["images.pexels.com", "www.pexels.com"],
   },
-  dangerouslyAllowSVG: false,
   async headers() {
     return [
       {

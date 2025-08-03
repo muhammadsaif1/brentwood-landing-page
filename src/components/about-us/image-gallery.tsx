@@ -118,7 +118,7 @@ export function ImageGallery() {
 
         <div className="relative max-w-4xl mx-auto">
           <motion.div
-            className="relative overflow-hidden rounded-2xl shadow-2xl bg-background"
+            className="relative overflow-hidden rounded-2xl shadow-2xl bg-background border border-[#00bfff]"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
@@ -129,6 +129,8 @@ export function ImageGallery() {
                 key={currentIndex}
                 src={images[currentIndex].src}
                 alt={images[currentIndex].alt}
+                width="600"
+                height="400"
                 className="w-full h-full object-cover"
                 initial={{ opacity: 0, scale: 1.1 }}
                 animate={{ opacity: 1, scale: 1 }}

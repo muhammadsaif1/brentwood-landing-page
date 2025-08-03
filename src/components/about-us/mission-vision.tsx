@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 export function MissionVision() {
   const missionPoints = [
@@ -153,8 +154,10 @@ export function MissionVision() {
             >
               {/* Main Image */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img
-                  src="/placeholder.svg?height=600&width=500&text=Tech Innovation Abstract"
+                <Image
+                  src="https://images.pexels.com/photos/33118147/pexels-photo-33118147.jpeg"
+                  width={400}
+                  height={300}
                   alt="Tech Innovation - Replaceable Image"
                   className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-110"
                 />

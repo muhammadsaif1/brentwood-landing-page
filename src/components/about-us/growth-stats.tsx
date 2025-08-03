@@ -154,23 +154,18 @@ export function GrowthStats() {
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="bg-gradient-to-r from-[#e0f7ff] to-[#dceeff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden">
+              <Card className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-8 relative">
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-[#00f6ff]/10 via-[#00bfff]/10 to-[#007bff]/10 rounded-lg"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                  />
                   <div className="relative z-10 flex items-center justify-between">
                     <div>
                       <div className="flex items-center space-x-3 mb-2">
-                        <Heart className="w-8 h-8 text-[#00bfff]" />
-                        <h3 className="text-lg font-semibold text-foreground">
+                        <Heart className="w-8 h-8 text-white" />
+                        <h3 className="text-lg font-semibold text-white">
                           Customer Satisfaction Rate
                         </h3>
                       </div>
                       <motion.div
-                        className="text-4xl font-bold text-[#007bff]"
+                        className="text-4xl font-bold text-white"
                         animate={{ scale: [1, 1.1, 1] }}
                         transition={{
                           duration: 2,
@@ -186,7 +181,7 @@ export function GrowthStats() {
                         duration: 2,
                         repeat: Number.POSITIVE_INFINITY,
                       }}
-                      className="text-[#00bfff]"
+                      className="text-white"
                     >
                       <Heart className="w-16 h-16 opacity-20" />
                     </motion.div>
@@ -200,23 +195,18 @@ export function GrowthStats() {
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="bg-gradient-to-r from-[#dceeff] to-[#e0f7ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden">
+              <Card className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden">
                 <CardContent className="p-8 relative">
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-[#007bff]/10 via-[#00bfff]/10 to-[#00f6ff]/10 rounded-lg"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                  />
                   <div className="relative z-10 flex items-center justify-between">
                     <div>
                       <div className="flex items-center space-x-3 mb-2">
-                        <TrendingUp className="w-8 h-8 text-[#007bff]" />
-                        <h3 className="text-lg font-semibold text-foreground">
+                        <TrendingUp className="w-8 h-8 text-white" />
+                        <h3 className="text-lg font-semibold text-white">
                           Annual Revenue Growth
                         </h3>
                       </div>
                       <motion.div
-                        className="text-4xl font-bold text-[#007bff]"
+                        className="text-4xl font-bold text-white"
                         animate={{ scale: [1, 1.1, 1] }}
                         transition={{
                           duration: 2,
@@ -232,7 +222,7 @@ export function GrowthStats() {
                         duration: 2,
                         repeat: Number.POSITIVE_INFINITY,
                       }}
-                      className="text-[#007bff]"
+                      className="text-white"
                     >
                       <TrendingUp className="w-16 h-16 opacity-20" />
                     </motion.div>
