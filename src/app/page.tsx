@@ -11,7 +11,7 @@ import BlockchainFever from "@/components/home/blockchain-fever";
 import AdditionalServices from "@/components/home/additional-services";
 import ProjectInMind from "@/components/home/project-in-mind";
 import MessageBoxBanner from "@/components/home/message-box-banner";
-import BoardOfExpertise from "@/components/home/board-of-expertise";
+import BoardOfExpertise from "@/components/common/board-of-expertise";
 import Testimonials from "@/components/home/testimonials";
 import BlogHighlights from "@/components/home/blog-highlights";
 import FAQsSection from "@/components/home/faqs-section";

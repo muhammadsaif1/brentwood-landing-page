@@ -11,7 +11,7 @@ export default function PortfolioTiles() {
       id: 1,
       title: "E-Commerce Platform",
       category: "Web Development",
-      image: "/placeholder.svg?height=400&width=600&text=E-Commerce+Platform",
+      image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
       description: "Modern shopping experience with AI recommendations",
     },
     {

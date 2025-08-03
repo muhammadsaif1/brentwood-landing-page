@@ -14,7 +14,7 @@ export default function InteractiveFilterTabs() {
       {
         id: 1,
         title: "E-Commerce Platform",
-        image: "/placeholder.svg?height=300&width=400&text=E-Commerce",
+        image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
         link: "#",
       },
       {

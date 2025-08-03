@@ -11,28 +11,32 @@ export default function ARVRProjects() {
       title: "AR Visualization",
       description:
         "Immersive augmented reality experiences for product visualization and marketing.",
-      image: "/placeholder.svg?height=200&width=300&text=AR+Visualization",
+      image:
+        "https://images.pexels.com/photos/4389739/pexels-photo-4389739.jpeg",
     },
     {
       icon: Gamepad2,
       title: "VR Gaming",
       description:
         "Interactive virtual reality games and entertainment experiences.",
-      image: "/placeholder.svg?height=200&width=300&text=VR+Gaming",
+      image:
+        "https://images.pexels.com/photos/4389742/pexels-photo-4389742.jpeg",
     },
     {
       icon: Home,
       title: "Virtual Showrooms",
       description:
         "3D virtual spaces for real estate, retail, and product demonstrations.",
-      image: "/placeholder.svg?height=200&width=300&text=Virtual+Showroom",
+      image:
+        "https://images.pexels.com/photos/33158875/pexels-photo-33158875.jpeg",
     },
     {
       icon: GraduationCap,
       title: "AR Training",
       description:
         "Educational and training applications using augmented reality technology.",
-      image: "/placeholder.svg?height=200&width=300&text=AR+Training",
+      image:
+        "https://images.pexels.com/photos/6250964/pexels-photo-6250964.jpeg",
     },
   ];
 

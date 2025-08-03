@@ -1,7 +1,7 @@
 import PageHero from "@/components/common/page-hero";
 import { ImpactStats } from "@/components/about-us/impact-stats";
 import { MissionVision } from "@/components/about-us/mission-vision";
-import BoardOfExpertise from "@/components/home/board-of-expertise";
+import BoardOfExpertise from "@/components/common/board-of-expertise";
 import { GrowthStats } from "@/components/about-us/growth-stats";
 import { TeamCTA } from "@/components/about-us/team-cta";
 import { ImageGallery } from "@/components/about-us/image-gallery";

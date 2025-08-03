@@ -14,7 +14,7 @@ export default function AIProjectsShowcase() {
       title: "Smart Analytics Platform",
       description:
         "AI-powered business intelligence dashboard with predictive analytics.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
       category: "Business Intelligence",
     },
     {
@@ -75,38 +75,38 @@ export default function AIProjectsShowcase() {
             <motion.div
               animate={{ x: `-${currentSlide * 100}%` }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="flex"
+              className="flex w-full"
             >
               {projects.map((project, index) => (
                 <div key={index} className="w-full flex-shrink-0">
-                  <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-2xl overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="grid lg:grid-cols-2 gap-0">
+                  <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-2xl overflow-hidden w-full m-0 p-0">
+                    <CardContent className="p-0 w-full h-full">
+                      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-0 h-auto min-h-[280px] sm:min-h-[320px] lg:min-h-[400px] max-h-[350px] sm:max-h-[400px] lg:max-h-[450px]">
                         {/* Image */}
-                        <div className="relative overflow-hidden">
+                        <div className="relative overflow-hidden h-full min-h-0 w-full max-h-[160px] sm:max-h-[180px] lg:max-h-[400px]">
                           <motion.img
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.3 }}
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-80 lg:h-96 object-cover"
+                            className="w-full h-full object-cover m-0"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                           <div className="absolute top-4 left-4">
-                            <span className="bg-[#00bfff] text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <span className="bg-[#00bfff] text-white px-2 py-0.5 text-xs sm:px-3 sm:py-1 sm:text-sm font-medium rounded-full">
                               {project.category}
                             </span>
                           </div>
                         </div>
 
                         {/* Content */}
-                        <div className="p-8 lg:p-12 flex flex-col justify-center">
+                        <div className="p-4 sm:p-5 lg:p-6 flex flex-col justify-center">
                           <motion.h3
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
-                            className="text-3xl font-bold text-foreground mb-6"
+                            className="text-2xl sm:text-3xl font-bold text-foreground mb-6"
                           >
                             {project.title}
                           </motion.h3>
@@ -116,7 +116,7 @@ export default function AIProjectsShowcase() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                             viewport={{ once: true }}
-                            className="text-lg text-muted-foreground leading-relaxed mb-8"
+                            className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-3 sm:mb-4 lg:mb-8 line-clamp-3"
                           >
                             {project.description}
                           </motion.p>
@@ -127,9 +127,9 @@ export default function AIProjectsShowcase() {
                             transition={{ duration: 0.6, delay: 0.4 }}
                             viewport={{ once: true }}
                           >
-                            <Button className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:from-[#00e0ff] hover:to-[#005ce6] text-white px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-400/25 group">
+                            <Button className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:from-[#00e0ff] hover:to-[#005ce6] text-white px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-400/25 group">
                               View Project Details
-                              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
                           </motion.div>
                         </div>
@@ -144,16 +144,16 @@ export default function AIProjectsShowcase() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110"
+            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-2 sm:p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-700" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110"
+            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-2 sm:p-3 rounded-full shadow-lg hover:bg-white transition-all duration-300 hover:scale-110"
           >
-            <ChevronRight className="w-6 h-6 text-gray-700" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-700" />
           </button>
 
           {/* Dots Indicator */}
@@ -162,7 +162,7 @@ export default function AIProjectsShowcase() {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide
                     ? "bg-[#00bfff] scale-125"
                     : "bg-gray-300 hover:bg-gray-400"

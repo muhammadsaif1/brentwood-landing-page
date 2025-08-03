@@ -11,28 +11,32 @@ export default function BlockchainProjects() {
       title: "Smart Contracts",
       description:
         "Secure, automated contracts that execute without intermediaries.",
-      image: "/placeholder.svg?height=200&width=300&text=Smart+Contracts",
+      image:
+        "https://images.pexels.com/photos/19825343/pexels-photo-19825343.jpeg",
     },
     {
       icon: Coins,
       title: "DeFi Platforms",
       description:
         "Decentralized finance solutions for lending, trading, and yield farming.",
-      image: "/placeholder.svg?height=200&width=300&text=DeFi+Platform",
+      image:
+        "https://images.pexels.com/photos/8370749/pexels-photo-8370749.jpeg",
     },
     {
       icon: Link,
       title: "NFT Marketplaces",
       description:
         "Create, mint, and trade unique digital assets on blockchain networks.",
-      image: "/placeholder.svg?height=200&width=300&text=NFT+Marketplace",
+      image:
+        "https://images.pexels.com/photos/14354111/pexels-photo-14354111.jpeg",
     },
     {
       icon: Zap,
       title: "Crypto Wallets",
       description:
         "Secure digital wallets for storing and managing cryptocurrencies.",
-      image: "/placeholder.svg?height=200&width=300&text=Crypto+Wallet",
+      image:
+        "https://images.pexels.com/photos/6766410/pexels-photo-6766410.jpeg",
     },
   ];
 

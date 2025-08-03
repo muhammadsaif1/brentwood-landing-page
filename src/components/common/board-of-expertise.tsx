@@ -9,7 +9,7 @@ export default function BoardOfExpertise() {
     {
       name: "Sarah Johnson",
       role: "CEO & Founder",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
       bio: "Visionary leader with 15+ years in tech innovation and business strategy.",
       linkedin: "#",
     },
@@ -83,7 +83,7 @@ export default function BoardOfExpertise() {
               viewport={{ once: true }}
               className="group"
             >
-              <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden p-0">
                 <CardContent className="p-0">
                   {/* Image */}
                   <div className="relative overflow-hidden">
