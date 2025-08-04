@@ -21,7 +21,7 @@ export async function submitContactForm(formData: FormData) {
   try {
     const { data, error } = await resend.emails.send({
       from: "Brentwood Global Contact <onboarding@resend.dev>",
-      to: ["saif.shabir12@gmail.com"],
+      to: ["business@brentwoodglobal.com"],
       subject: `New Contact Form Submission: ${subject}`,
       html: `
         <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 700px; margin: 0 auto; padding: 0; background-color: #f8fafc;">

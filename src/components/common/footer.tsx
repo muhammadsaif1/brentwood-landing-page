@@ -11,39 +11,24 @@ import {
   Linkedin,
   MessageCircle,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const offices = [
     {
       flag: "🇺🇸",
-      country: "New York, USA",
-      address:
-        "Office Number 266, Manhattan Business Center, Wall Street District",
+      country: "Blacksburg, USA",
+      address: "105 Roanoke St E, VA 24060,",
     },
     {
-      flag: "🇬🇧",
-      country: "London, England",
-      address: "Office # 51, Canary Wharf, Business District E14",
+      flag: "🇵🇰",
+      country: "Islamabad, Pakistan",
+      address: "Plot No, 94 Street 7, I-10/3",
     },
     {
-      flag: "🇨🇦",
-      country: "Toronto, Canada",
+      flag: "🇺🇰",
+      country: "Coventry, United Kingdom",
       address: "Plot 29, Financial Plaza, Downtown Toronto, Ontario M5H 2N2",
-    },
-    {
-      flag: "🇦🇺",
-      country: "Sydney, Australia",
-      address: "66 George Street, Sydney CBD, New South Wales 2000",
-    },
-    {
-      flag: "🇩🇪",
-      country: "Berlin, Germany",
-      address: "Potsdamer Platz 1, 10785 Berlin, Brandenburg",
-    },
-    {
-      flag: "🇸🇬",
-      country: "Singapore",
-      address: "1 Marina Bay, Central Business District, Singapore 018989",
     },
   ];
 
@@ -81,11 +66,15 @@ export default function Footer() {
             {/* Company Logo and Description */}
             <div className="space-y-6">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold text-white tracking-wider">
-                  BRENTWOOD{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] font-bold text-2xl lg:text-3xl tracking-tight">
-                    ∞
-                  </span>
+                <h1 className="text-3xl font-bold text-white tracking-wider flex items-center gap-2">
+                  BRENTWOOD
+                  <Image
+                    src="/logo.png"
+                    alt="Brentwood Global Logo"
+                    width={24}
+                    height={24}
+                    className="lg:w-9 lg:h-9 object-contain"
+                  />
                 </h1>
                 <div className="text-xs text-gray-400 uppercase tracking-widest">
                   GLOBAL
@@ -114,7 +103,7 @@ export default function Footer() {
                 >
                   <span className="text-lg mt-1">{office.flag}</span>
                   <div>
-                    <h3 className="text-white font-medium text-sm group-hover:text-orange-400 transition-colors">
+                    <h3 className="text-white font-medium text-sm group-hover:text-blue-400 transition-colors">
                       {office.country}
                     </h3>
                     <p className="text-gray-400 text-xs leading-relaxed">
@@ -127,7 +116,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Middle Section - Social Media Links */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -148,7 +137,8 @@ export default function Footer() {
                 </span>
               </motion.a>
             ))}
-          </motion.div>
+          </motion.div> */}
+          <div></div>
 
           {/* Right Section - Get A Quote */}
           <motion.div

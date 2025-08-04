@@ -7,45 +7,24 @@ import { Linkedin } from "lucide-react";
 export default function BoardOfExpertise() {
   const teamMembers = [
     {
-      name: "Sarah Johnson",
-      role: "CEO & Founder",
+      name: "Ali Ejaz",
+      role: "CEO",
       image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
-      bio: "Visionary leader with 15+ years in tech innovation and business strategy.",
+      bio: "Visionary leader with 10+ years in tech innovation and business strategy.",
       linkedin: "#",
     },
     {
-      name: "Michael Chen",
+      name: "Allah Bachayo Memon",
       role: "CTO",
       image: "/placeholder.svg?height=300&width=300",
-      bio: "Technology expert specializing in AI, blockchain, and scalable architectures.",
+      bio: "Technology expert specializing in AI, blockchain, and scalable architectures.",
       linkedin: "#",
     },
     {
-      name: "Emily Rodriguez",
-      role: "Head of Design",
+      name: "Khayyam Ahmed",
+      role: "Strertgic Partner",
       image: "/placeholder.svg?height=300&width=300",
-      bio: "Creative director with expertise in user experience and digital design.",
-      linkedin: "#",
-    },
-    {
-      name: "David Kim",
-      role: "Lead Developer",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Full-stack developer with passion for clean code and innovative solutions.",
-      linkedin: "#",
-    },
-    {
-      name: "Lisa Thompson",
-      role: "Marketing Director",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Digital marketing strategist driving growth through data-driven campaigns.",
-      linkedin: "#",
-    },
-    {
-      name: "James Wilson",
-      role: "Project Manager",
-      image: "/placeholder.svg?height=300&width=300",
-      bio: "Agile expert ensuring seamless project delivery and client satisfaction.",
+      bio: "Building strong alliances to turn bold ideas into lasting impact.",
       linkedin: "#",
     },
   ];

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,11 +76,15 @@ export default function Header() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
-              <div className="text-white font-bold text-xl tracking-wider group-hover:text-blue-400 transition-colors duration-300">
+              <div className="text-white font-bold text-xl tracking-wider group-hover:text-blue-400 transition-colors duration-300 flex items-center gap-2">
                 BRENTWOOD
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] font-bold text-2xl lg:text-3xl tracking-tight">
-                  ∞
-                </span>
+                <Image
+                  src="/logo.png"
+                  alt="Brentwood Global Logo"
+                  width={24}
+                  height={24}
+                  className="lg:w-9 lg:h-9 object-contain"
+                />
               </div>
               <div className="text-xs text-gray-400 uppercase tracking-widest group-hover:text-blue-300 transition-colors duration-300">
                 GLOBAL

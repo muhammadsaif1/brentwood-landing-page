@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import PageHero from "@/components/common/page-hero";
+import Link from "next/link";
 
 // IoT Projects Data - easily replaceable with real company data
 const iotProjects = [
@@ -11,7 +12,7 @@ const iotProjects = [
     title: "Smart Home Automation",
     description:
       "Complete home automation system with voice control, smart lighting, security integration, and energy management. Connected devices that make homes more efficient and secure.",
-    image: "/placeholder.svg?height=400&width=600&text=Smart+Home+IoT+System",
+    image: "/smart-home.jpg",
     category: "Residential IoT",
   },
   {
@@ -19,8 +20,7 @@ const iotProjects = [
     title: "Industrial Monitoring System",
     description:
       "Real-time monitoring and predictive maintenance for manufacturing equipment. IoT sensors track performance, temperature, and operational efficiency to prevent downtime.",
-    image:
-      "/placeholder.svg?height=400&width=600&text=Industrial+IoT+Monitoring",
+    image: "/industrial-monitoring.jpg",
     category: "Industrial IoT",
   },
   {
@@ -28,7 +28,7 @@ const iotProjects = [
     title: "Healthcare Device Integration",
     description:
       "Connected medical devices for patient monitoring and data collection. Seamless integration with hospital systems for improved patient care and operational efficiency.",
-    image: "/placeholder.svg?height=400&width=600&text=Healthcare+IoT+Devices",
+    image: "/healthcare.jpg",
     category: "Healthcare IoT",
   },
   {
@@ -36,8 +36,7 @@ const iotProjects = [
     title: "Smart City Infrastructure",
     description:
       "Urban IoT solutions including traffic management, environmental monitoring, and public safety systems. Creating intelligent cities that respond to citizen needs.",
-    image:
-      "/placeholder.svg?height=400&width=600&text=Smart+City+IoT+Infrastructure",
+    image: "/smart-city.jpg",
     category: "Smart City",
   },
   {
@@ -45,8 +44,7 @@ const iotProjects = [
     title: "Agricultural IoT Solutions",
     description:
       "Precision farming with soil sensors, weather monitoring, and automated irrigation systems. IoT technology that optimizes crop yields and resource usage.",
-    image:
-      "/placeholder.svg?height=400&width=600&text=Agricultural+IoT+Sensors",
+    image: "/agriculture.jpg",
     category: "AgriTech IoT",
   },
   {
@@ -54,7 +52,7 @@ const iotProjects = [
     title: "Fleet Management System",
     description:
       "GPS tracking, vehicle diagnostics, and driver behavior monitoring for commercial fleets. Real-time insights for improved efficiency and safety.",
-    image: "/placeholder.svg?height=400&width=600&text=Fleet+Management+IoT",
+    image: "/fleet-management.jpg",
     category: "Transportation IoT",
   },
 ];
@@ -89,7 +87,7 @@ export default function IoTPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Our IoT{" "}
+              Popular IoT{" "}
               <span className="bg-gradient-to-r from-[#00f6ff] to-[#007bff] bg-clip-text text-transparent">
                 Projects
               </span>
@@ -130,13 +128,13 @@ export default function IoTPage() {
                     whileHover={{ opacity: 1 }}
                     className="absolute inset-0 bg-gradient-to-t from-[#007bff]/80 via-[#00bfff]/40 to-transparent flex items-end justify-center pb-6"
                   >
-                    <motion.button
+                    {/* <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       className="bg-white text-[#007bff] px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       View Details
-                    </motion.button>
+                    </motion.button> */}
                   </motion.div>
                 </div>
                 <div className="p-6">
@@ -210,24 +208,28 @@ export default function IoTPage() {
               Let&apos;s build intelligent IoT solutions that transform your
               business and create meaningful connections
             </p>
-
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 20px 40px rgba(0, 191, 255, 0.3)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-[#00f6ff] to-[#007bff] text-white px-8 py-4 rounded-lg font-bold text-lg shadow-2xl hover:shadow-[#00bfff]/25 transition-all duration-300"
-            >
-              Start Your IoT Journey
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-                className="ml-2 inline-block"
+            <Link href={"/contact-us"}>
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(0, 191, 255, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-[#00f6ff] to-[#007bff] text-white px-8 py-4 rounded-lg font-bold text-lg shadow-2xl hover:shadow-[#00bfff]/25 transition-all duration-300"
               >
-                →
-              </motion.span>
-            </motion.button>
+                Start Your IoT Journey
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Number.POSITIVE_INFINITY,
+                  }}
+                  className="ml-2 inline-block"
+                >
+                  →
+                </motion.span>
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>

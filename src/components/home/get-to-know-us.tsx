@@ -102,7 +102,10 @@ export default function GetToKnowUs() {
   };
 
   return (
-    <section className="py-20 bg-background text-foreground">
+    <section
+      id="get-to-know-us"
+      className="py-20 bg-background text-foreground"
+    >
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}

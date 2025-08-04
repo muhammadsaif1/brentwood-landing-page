@@ -127,10 +127,10 @@ export default function AIProjectsShowcase() {
                             transition={{ duration: 0.6, delay: 0.4 }}
                             viewport={{ once: true }}
                           >
-                            <Button className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:from-[#00e0ff] hover:to-[#005ce6] text-white px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-400/25 group">
+                            {/* <Button className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:from-[#00e0ff] hover:to-[#005ce6] text-white px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-400/25 group">
                               View Project Details
                               <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                            </Button>
+                            </Button> */}
                           </motion.div>
                         </div>
                       </div>

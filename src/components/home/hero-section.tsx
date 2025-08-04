@@ -3,8 +3,17 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSection() {
+  const scrollToGetToKnowUs = () => {
+    const section = document.getElementById("get-to-know-us");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen overflow-hidden w-full max-w-full overscroll-x-none">
       {/* Video Background Wrapper */}
@@ -17,10 +26,7 @@ export default function HeroSection() {
             playsInline
             className="absolute inset-0 w-full max-w-[100vw] min-w-full h-full object-cover will-change-transform"
           >
-            <source
-              src="https://videos.pexels.com/video-files/27936889/12266398_1920_1080_30fps.mp4"
-              type="video/mp4"
-            />
+            <source src="/animation.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -45,10 +51,19 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight px-2"
+              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight px-2 flex flex-col items-center"
             >
-              <span className="block">BRENTWOOD</span>
-              <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent block mt-2">
+              <span className="flex items-center gap-2">
+                BRENTWOOD
+                <Image
+                  src="/logo.png"
+                  alt="Brentwood Global Logo"
+                  width={30}
+                  height={30}
+                  className="xs:w-10 sm:w-12 md:w-14 lg:w-16 object-contain"
+                />
+              </span>
+              <span className="bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] bg-clip-text text-transparent mt-2">
                 GLOBAL
               </span>
             </motion.h1>
@@ -79,13 +94,16 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full px-4 sm:px-6"
           >
-            <Button className="w-full sm:w-auto bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:brightness-110 text-white px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#00bfff]/25 group min-w-[200px] sm:min-w-[220px]">
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link href="/contact-us">
+              <Button className="w-full sm:w-auto bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] hover:brightness-110 text-white px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-medium rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-[#00bfff]/25 group min-w-[200px] sm:min-w-[220px]">
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
 
             <Button
               variant="outline"
+              onClick={scrollToGetToKnowUs}
               className="w-full sm:w-auto border-2 border-[#00bfff] text-[#00bfff] hover:bg-[#00bfff]/10 hover:border-[#00bfff] px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg font-medium rounded-full transition-all duration-300 group bg-transparent backdrop-blur-sm min-w-[200px] sm:min-w-[220px]"
             >
               <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />

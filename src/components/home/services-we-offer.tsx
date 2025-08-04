@@ -112,7 +112,7 @@ export default function ServicesWeOffer() {
                   transition={{ duration: 0.3 }}
                   className="absolute inset-0 bg-gradient-to-br from-[#00f6ff]/90 to-[#007bff]/90 flex items-center justify-center z-10"
                 >
-                  <Link href="/contact">
+                  <Link href="/contact-us">
                     <Button className="bg-white text-[#00bfff] hover:bg-gray-100 font-semibold px-6 py-2 rounded-full transform hover:scale-105 transition-all duration-300">
                       Get a Quote
                     </Button>

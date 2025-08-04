@@ -1,12 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Loader2 } from "lucide-react";
-
 export default function AnimatedCharacter() {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -95,23 +89,14 @@ export default function AnimatedCharacter() {
                 loop
                 muted
                 playsInline
-                onCanPlay={() => setIsLoading(false)}
-                onError={() => setIsLoading(false)}
                 className="w-full h-full object-cover"
               >
                 <source
-                  src="https://videos.pexels.com/video-files/29306492/12637575_1920_1080_30fps.mp4"
+                  // src="https://videos.pexels.com/video-files/29306492/12637575_1920_1080_30fps.mp4"
+                  src="/animation2.mp4"
                   type="video/mp4"
                 />
               </video>
-
-              {/* Loader */}
-              {isLoading && (
-                <div className="absolute inset-0 flex justify-center items-center bg-black/30">
-                  <Loader2 className="w-12 h-12 text-[#00bfff] animate-spin" />
-                </div>
-              )}
-
               {/* Decorative Blobs */}
               <motion.div
                 animate={{

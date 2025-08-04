@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface PageHeroProps {
   title: string;
@@ -164,20 +165,22 @@ export default function PageHero({ title, description }: PageHeroProps) {
             transition={{ duration: 1, delay: 1.1 }}
             className="pt-8"
           >
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 20px 40px rgba(37, 99, 235, 0.3)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:from-blue-500 hover:to-blue-600"
-            >
-              <span className="relative z-10">Explore Our Solutions</span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                initial={false}
-              />
-            </motion.button>
+            <Link href={"/contact-us"}>
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 20px 40px rgba(37, 99, 235, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:from-blue-500 hover:to-blue-600"
+              >
+                <span className="relative z-10">Explore Our Solutions</span>
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={false}
+                />
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
 
