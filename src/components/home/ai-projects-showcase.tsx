@@ -11,30 +11,31 @@ export default function AIProjectsShowcase() {
 
   const projects = [
     {
-      title: "Smart Analytics Platform",
+      title: "SmartaDoc AI – Chat with Your Documents",
       description:
-        "AI-powered business intelligence dashboard with predictive analytics.",
-      image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
-      category: "Business Intelligence",
+        "An AI-powered web application that lets users upload PDFs, spreadsheets, presentations, JSON files, and more, then interactively query, summarize, and analyze the content using natural-language chat interfaces.",
+      image: "/ai-powered.png",
+      category: "AI",
     },
     {
-      title: "Voice Assistant Integration",
+      title: "ChatFlow – AI Chatbot Built for Growth",
       description:
-        "Custom voice AI solution for enterprise customer service automation.",
-      image: "/placeholder.svg?height=300&width=400",
+        "AI chatbot builder that effortlessly automates customer support, generates qualifying leads, and boosts SEO visibility, reducing support response time by up to 8× while helping businesses rank higher on search engines.",
+      image: "/ai-chatbot.png",
       category: "Natural Language Processing",
     },
     {
-      title: "Computer Vision System",
+      title: "AI Health Assistant for Mindful Care",
       description:
-        "Advanced image recognition for quality control in manufacturing.",
-      image: "/placeholder.svg?height=300&width=400",
+        "A fully AI-driven health platform offering patients a 24/7 AI Doctor, symptom checker, and lab test analysis.",
+      image: "/ai-health-assisstant.png",
       category: "Computer Vision",
     },
     {
-      title: "Predictive Maintenance AI",
-      description: "Machine learning models for equipment failure prediction.",
-      image: "/placeholder.svg?height=300&width=400",
+      title: "Runday.ai – AI Agent Sales Assistant",
+      description:
+        "A no-code generative AI platform that responds to inbound buyer queries 24/7, qualifies leads, books appointments, and follows up on no-shows.",
+      image: "/runday-ai.png",
       category: "Machine Learning",
     },
   ];
