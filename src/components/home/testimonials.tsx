@@ -10,17 +10,16 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      role: "CEO, TechStart Inc.",
-      content:
-        "Brentwood Global transformed our digital presence completely. Their AI solutions increased our efficiency by 300% and their team's expertise is unmatched.",
+      name: "Dereck Rizo",
+      role: "Founder & CEO at Trainest, Inc.",
+      content: "Good team to work with. Very professional and helpful",
       rating: 5,
     },
     {
-      name: "Maria Garcia",
-      role: "CTO, InnovateCorp",
+      name: "gene furman,",
+      role: "kingpawnusa",
       content:
-        "The blockchain solution they developed for us revolutionized our supply chain. Professional, innovative, and delivered on time. Highly recommended!",
+        "Attention to detail is what makes Brentwood different than anyone else and I am a client since freelancer days. Thank you for project well done.",
       rating: 5,
     },
     {

@@ -65,13 +65,13 @@ export default function BoardOfExpertise() {
               <Card className="bg-gradient-to-br from-[#cceeff] to-[#e6f5ff] border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden p-0">
                 <CardContent className="p-0">
                   {/* Image */}
-                  <div className="relative overflow-hidden">
+                  <div className="relative aspect-[11/12] overflow-hidden w-full">
                     <motion.img
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-80 object-cover"
+                      className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
