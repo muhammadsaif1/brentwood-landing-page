@@ -93,7 +93,7 @@ export default function AnimatedCharacter() {
               >
                 <source
                   // src="https://videos.pexels.com/video-files/29306492/12637575_1920_1080_30fps.mp4"
-                  src="/animation2.mp4"
+                  src="/animation2.webm"
                   type="video/mp4"
                 />
               </video>

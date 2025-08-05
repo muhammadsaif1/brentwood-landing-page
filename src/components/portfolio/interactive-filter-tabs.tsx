@@ -2,194 +2,198 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function InteractiveFilterTabs() {
   const [activeTab, setActiveTab] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
 
-  const tabs = ["All", "Web", "AI", "Blockchain", "IoT", "Design"];
+  const tabs = ["All", "Web", "AI", "Blockchain", "Mobile", "Design"];
 
   const projects = {
     All: [
       {
         id: 1,
-        title: "E-Commerce Platform",
-        image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
-        link: "#",
+        title: "Tripping - The Kayak of Vacation Rentals",
+        category: "Web Development",
+        image: "/tripping.png",
+        description:
+          "A global metasearch engine enabling users to compare properties and prices from platforms like Booking.com, VRBO, HomeAway, and more.",
+        link: "https://www.tripping.com/",
       },
       {
         id: 2,
-        title: "AI Dashboard",
-        image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
-        link: "#",
+        title: "Embedded Insurance for Adventure & Travel Brands",
+        category: "Web Development",
+        image: "/embedded-insurance.png",
+        description:
+          "It streamlines sales with checkout integrations, flexible pricing, and a self-serve claims portal, helping businesses protect customers and generate new revenue without operational complexity.",
+        link: "https://www.getspot.com/",
       },
       {
         id: 3,
-        title: "Crypto Wallet",
-        image: "/placeholder.svg?height=300&width=400&text=Crypto+Wallet",
-        link: "#",
+        title: "SmartaDoc AI – Chat with Your Documents",
+        category: "AI",
+        image: "/ai-powered.png",
+        description:
+          "An AI-powered web application that lets users upload PDFs, spreadsheets, presentations, JSON files, and more, then interactively query, summarize, and analyze the content using natural-language chat interfaces.",
+        link: "https://www.smartadoc.com/",
       },
       {
         id: 4,
-        title: "Smart Home App",
-        image: "/placeholder.svg?height=300&width=400&text=Smart+Home",
-        link: "#",
+        title: "ChatFlow – AI Chatbot Built for Growth",
+        category: "AI",
+        image: "/ai-chatbot.png",
+        description:
+          "AI chatbot builder that effortlessly automates customer support, generates qualifying leads, and boosts SEO visibility, reducing support response time by up to 8× while helping businesses rank higher on search engines.",
+        link: "https://chatflowapp.com/",
       },
       {
         id: 5,
-        title: "Brand Identity",
-        image: "/placeholder.svg?height=300&width=400&text=Brand+Identity",
-        link: "#",
+        title: "Healee – White-Label Telehealth That Scales",
+        category: "Web Development",
+        image: "/healee.png",
+        description:
+          "A customizable, all-in-one telehealth platform that enables providers, clinics, hospitals, and insurers to launch fully branded virtual care experiences with smart intake, AI-driven scheduling, secure messaging, and integrated billing.",
+        link: "#", // Update with actual URL, e.g., https://healee.com
       },
       {
         id: 6,
-        title: "Healthcare Portal",
-        image: "/placeholder.svg?height=300&width=400&text=Healthcare",
-        link: "#",
+        title: "Runday.ai – AI Agent Sales Assistant",
+        category: "AI",
+        image: "/runday-ai.png",
+        description:
+          "A no-code generative AI platform that responds to inbound buyer queries 24/7, qualifies leads, books appointments, and follows up on no-shows.",
+        link: "https://runday.ai/",
       },
       {
         id: 7,
-        title: "ML Analytics",
-        image: "/placeholder.svg?height=300&width=400&text=ML+Analytics",
-        link: "#",
+        title: "Financial Fusion – On-Demand AI CFO",
+        category: "Blockchain & AI",
+        image: "/financial-fusion.png",
+        description:
+          "An intelligent financial SaaS powered by an AI CFO, Financial Fusion ingests profit & loss, balance sheet, and cash flow data to generate easy-to-understand, actionable reports and real-time forecasting.",
+        link: "https://financialfusion.io/",
       },
       {
         id: 8,
-        title: "NFT Marketplace",
-        image: "/placeholder.svg?height=300&width=400&text=NFT+Marketplace",
-        link: "#",
+        title: "AI Health Assistant for Mindful Care",
+        category: "AI",
+        image: "/ai-health-assisstant.png",
+        description:
+          "A fully AI-driven health platform offering patients a 24/7 AI Doctor, symptom checker, and lab test analysis.",
+        link: "https://docus.ai/",
+      },
+      {
+        id: 9,
+        title: "Instant AI-Powered Portfolio Builder",
+        category: "Mobile Development",
+        image: "/ai-portfolio.png",
+        description:
+          "An intuitive investment tool that generates customized, diversified portfolios in seconds based on your risk tolerance, time horizon, and financial goals.",
+        link: "https://www.portfoliogpt.xyz/",
       },
     ],
     Web: [
       {
         id: 1,
-        title: "E-Commerce Platform",
-        image: "/placeholder.svg?height=300&width=400&text=E-Commerce",
-        link: "#",
+        title: "Tripping - The Kayak of Vacation Rentals",
+        category: "Web Development",
+        image: "/tripping.png",
+        description:
+          "A global metasearch engine enabling users to compare properties and prices from platforms like Booking.com, VRBO, HomeAway, and more.",
+        link: "https://www.tripping.com/",
       },
       {
-        id: 6,
-        title: "Healthcare Portal",
-        image: "/placeholder.svg?height=300&width=400&text=Healthcare",
-        link: "#",
+        id: 2,
+        title: "Embedded Insurance for Adventure & Travel Brands",
+        category: "Web Development",
+        image: "/embedded-insurance.png",
+        description:
+          "It streamlines sales with checkout integrations, flexible pricing, and a self-serve claims portal, helping businesses protect customers and generate new revenue without operational complexity.",
+        link: "https://www.getspot.com/",
       },
       {
-        id: 9,
-        title: "Corporate Website",
-        image: "/placeholder.svg?height=300&width=400&text=Corporate+Site",
-        link: "#",
-      },
-      {
-        id: 10,
-        title: "SaaS Platform",
-        image: "/placeholder.svg?height=300&width=400&text=SaaS+Platform",
-        link: "#",
+        id: 5,
+        title: "Healee – White-Label Telehealth That Scales",
+        category: "Web Development",
+        image: "/healee.png",
+        description:
+          "A customizable, all-in-one telehealth platform that enables providers, clinics, hospitals, and insurers to launch fully branded virtual care experiences with smart intake, AI-driven scheduling, secure messaging, and integrated billing.",
+        link: "#", // Update with actual URL, e.g., https://healee.com
       },
     ],
     AI: [
       {
-        id: 2,
-        title: "AI Dashboard",
-        image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
-        link: "#",
+        id: 3,
+        title: "SmartaDoc AI – Chat with Your Documents",
+        category: "AI",
+        image: "/ai-powered.png",
+        description:
+          "An AI-powered web application that lets users upload PDFs, spreadsheets, presentations, JSON files, and more, then interactively query, summarize, and analyze the content using natural-language chat interfaces.",
+        link: "https://www.smartadoc.com/",
+      },
+      {
+        id: 4,
+        title: "ChatFlow – AI Chatbot Built for Growth",
+        category: "AI",
+        image: "/ai-chatbot.png",
+        description:
+          "AI chatbot builder that effortlessly automates customer support, generates qualifying leads, and boosts SEO visibility, reducing support response time by up to 8× while helping businesses rank higher on search engines.",
+        link: "https://chatflowapp.com/",
+      },
+      {
+        id: 6,
+        title: "Runday.ai – AI Agent Sales Assistant",
+        category: "AI",
+        image: "/runday-ai.png",
+        description:
+          "A no-code generative AI platform that responds to inbound buyer queries 24/7, qualifies leads, books appointments, and follows up on no-shows.",
+        link: "https://runday.ai/",
       },
       {
         id: 7,
-        title: "ML Analytics",
-        image: "/placeholder.svg?height=300&width=400&text=ML+Analytics",
-        link: "#",
+        title: "Financial Fusion – On-Demand AI CFO",
+        category: "Blockchain & AI",
+        image: "/financial-fusion.png",
+        description:
+          "An intelligent financial SaaS powered by an AI CFO, Financial Fusion ingests profit & loss, balance sheet, and cash flow data to generate easy-to-understand, actionable reports and real-time forecasting.",
+        link: "https://financialfusion.io/",
       },
       {
-        id: 11,
-        title: "Chatbot System",
-        image: "/placeholder.svg?height=300&width=400&text=Chatbot",
-        link: "#",
-      },
-      {
-        id: 12,
-        title: "Predictive Analytics",
-        image: "/placeholder.svg?height=300&width=400&text=Predictive",
-        link: "#",
+        id: 8,
+        title: "AI Health Assistant for Mindful Care",
+        category: "AI",
+        image: "/ai-health-assisstant.png",
+        description:
+          "A fully AI-driven health platform offering patients a 24/7 AI Doctor, symptom checker, and lab test analysis.",
+        link: "https://docus.ai/",
       },
     ],
     Blockchain: [
       {
-        id: 3,
-        title: "Crypto Wallet",
-        image: "/placeholder.svg?height=300&width=400&text=Crypto+Wallet",
-        link: "#",
-      },
-      {
-        id: 8,
-        title: "NFT Marketplace",
-        image: "/placeholder.svg?height=300&width=400&text=NFT+Marketplace",
-        link: "#",
-      },
-      {
-        id: 13,
-        title: "DeFi Platform",
-        image: "/placeholder.svg?height=300&width=400&text=DeFi+Platform",
-        link: "#",
-      },
-      {
-        id: 14,
-        title: "Smart Contracts",
-        image: "/placeholder.svg?height=300&width=400&text=Smart+Contracts",
-        link: "#",
+        id: 7,
+        title: "Financial Fusion – On-Demand AI CFO",
+        category: "Blockchain & AI",
+        image: "/financial-fusion.png",
+        description:
+          "An intelligent financial SaaS powered by an AI CFO, Financial Fusion ingests profit & loss, balance sheet, and cash flow data to generate easy-to-understand, actionable reports and real-time forecasting.",
+        link: "https://financialfusion.io/",
       },
     ],
-    IoT: [
+    Mobile: [
       {
-        id: 4,
-        title: "Smart Home App",
-        image: "/placeholder.svg?height=300&width=400&text=Smart+Home",
-        link: "#",
-      },
-      {
-        id: 15,
-        title: "Industrial IoT",
-        image: "/placeholder.svg?height=300&width=400&text=Industrial+IoT",
-        link: "#",
-      },
-      {
-        id: 16,
-        title: "Wearable Tech",
-        image: "/placeholder.svg?height=300&width=400&text=Wearable+Tech",
-        link: "#",
-      },
-      {
-        id: 17,
-        title: "Smart City",
-        image: "/placeholder.svg?height=300&width=400&text=Smart+City",
-        link: "#",
+        id: 9,
+        title: "Instant AI-Powered Portfolio Builder",
+        category: "Mobile Development",
+        image: "/ai-portfolio.png",
+        description:
+          "An intuitive investment tool that generates customized, diversified portfolios in seconds based on your risk tolerance, time horizon, and financial goals.",
+        link: "https://www.portfoliogpt.xyz/",
       },
     ],
-    Design: [
-      {
-        id: 5,
-        title: "Brand Identity",
-        image: "/placeholder.svg?height=300&width=400&text=Brand+Identity",
-        link: "#",
-      },
-      {
-        id: 18,
-        title: "Mobile UI Kit",
-        image: "/placeholder.svg?height=300&width=400&text=Mobile+UI",
-        link: "#",
-      },
-      {
-        id: 19,
-        title: "Dashboard Design",
-        image: "/placeholder.svg?height=300&width=400&text=Dashboard+Design",
-        link: "#",
-      },
-      {
-        id: 20,
-        title: "Logo Collection",
-        image: "/placeholder.svg?height=300&width=400&text=Logo+Collection",
-        link: "#",
-      },
-    ],
+    Design: [],
   };
 
   const currentProjects = projects[activeTab as keyof typeof projects] || [];
@@ -268,61 +272,56 @@ export default function InteractiveFilterTabs() {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
         >
           {displayedProjects.map((project, index) => (
-            <motion.div
+            <Link
               key={project.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#00bfff]"
+              href={project.link || "#"}
+              target={project.link !== "#" ? "_blank" : "_self"}
+              rel={project.link !== "#" ? "noopener noreferrer" : undefined}
+              className="block"
+              onClick={() => console.log(`Navigating to: ${project.link}`)}
             >
-              <div className="relative overflow-hidden">
-                <motion.img
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                  src={project.image}
-                  alt={project.title}
-                  width="400"
-                  height="300"
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-
-              {/* Hover Overlay */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileHover={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                className="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#00bfff]"
               >
-                <h3 className="text-xl font-bold mb-4">{project.title}</h3>
-                <div className="flex space-x-3">
-                  <motion.a
-                    href={project.link}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-[#00bfff] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#00a7e1] transition-colors"
-                  >
-                    View
-                  </motion.a>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-white/30 transition-colors"
-                  >
-                    Details
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-white/30 transition-colors"
-                  >
-                    Share
-                  </motion.button>
+                <div className="relative overflow-hidden aspect-w-16 aspect-h-9 min-h-[200px] p-0">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain"
+                    onLoadingComplete={() =>
+                      console.log(`Loaded image: ${project.image}`)
+                    }
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${project.image}`);
+                      e.currentTarget.src = "/placeholder.png";
+                    }}
+                  />
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
+                  />
+                </div>
+                <div className="p-6 text-white bg-black/60">
+                  <span className="text-[#00f6ff] text-sm font-semibold mb-2 block text-shadow-sm">
+                    {project.category}
+                  </span>
+                  <h3 className="text-xl font-bold mb-2 text-shadow-sm">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-200 text-sm mb-4 text-shadow-sm">
+                    {project.description}
+                  </p>
                 </div>
               </motion.div>
-            </motion.div>
+            </Link>
           ))}
         </motion.div>
 
@@ -352,6 +351,11 @@ export default function InteractiveFilterTabs() {
           </motion.div>
         )}
       </div>
+      <style jsx>{`
+        .text-shadow-sm {
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+      `}</style>
     </section>
   );
 }
