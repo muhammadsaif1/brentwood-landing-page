@@ -16,7 +16,7 @@ export default function BoardOfExpertise() {
     {
       name: "Allah Bachayo Memon",
       role: "CTO",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/ab2.jpg",
       bio: "Technology expert specializing in AI, blockchain, and scalable architectures.",
       linkedin: "#",
     },
