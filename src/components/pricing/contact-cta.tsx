@@ -150,7 +150,7 @@ export default function ContactCTA() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Link href="/contact">
+          <Link href="/contact-us">
             <Button className="bg-white text-[#007bff] hover:bg-[#e6f7ff] px-12 py-6 text-xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group relative overflow-hidden">
               <span className="relative z-10 flex items-center">
                 Get Your Free Quote

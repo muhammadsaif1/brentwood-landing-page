@@ -109,7 +109,7 @@ export default function FinalCTA() {
             transition={{ duration: 0.8, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <Link href="/contact">
+            <Link href="/contact-us">
               <Button className="bg-[#007bff] text-white hover:bg-[#00bfff] px-12 py-6 text-xl font-bold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group relative overflow-hidden">
                 {/* Button Glow Effect */}
                 <motion.div

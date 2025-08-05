@@ -9,7 +9,7 @@ export default function BoardOfExpertise() {
     {
       name: "Ali Ejaz",
       role: "CEO",
-      image: "/placeholder.svg?height=300&width=400&text=AI+Dashboard",
+      image: "/ali.jpg",
       bio: "Visionary leader with 10+ years in tech innovation and business strategy.",
       linkedin: "#",
     },
@@ -23,7 +23,7 @@ export default function BoardOfExpertise() {
     {
       name: "Khayyam Ahmed",
       role: "Strertgic Partner",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/khayyam.jpg",
       bio: "Building strong alliances to turn bold ideas into lasting impact.",
       linkedin: "#",
     },
