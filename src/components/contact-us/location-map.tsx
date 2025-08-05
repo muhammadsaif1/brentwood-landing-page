@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function LocationMap() {
   return (
@@ -30,15 +31,13 @@ export default function LocationMap() {
           className="bg-background p-4 md:p-8 rounded-3xl shadow-2xl border border-[#00f6ff]/20"
         >
           <div className="relative overflow-hidden rounded-2xl">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.0234567890123!2d73.0479!3d33.6844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQxJzA0LjAiTiA3M8KwMDInNTIuNCJF!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-64 md:h-96 lg:h-[400px] rounded-2xl"
+            <Image
+              src="https://i.dawn.com/primary/2014/08/53f9033984b91.jpg"
+              alt="Zero Point Islamabad Location Map showing Brentwood Global's area"
+              width={1200}
+              height={400}
+              className="w-full h-64 md:h-96 lg:h-[400px] object-cover rounded-2xl hover:scale-105 transition-transform duration-500"
+              priority
             />
 
             {/* Overlay with company info */}
@@ -47,7 +46,7 @@ export default function LocationMap() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="absolute top-4 left-4 bg-background/95 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-xs"
+              className="absolute top-4 left-4 bg-background/95 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-xs border border-[#00f6ff]/20"
             >
               <h3 className="font-bold text-foreground mb-2">
                 Brentwood Global
@@ -55,8 +54,9 @@ export default function LocationMap() {
               <p className="text-sm text-muted-foreground mb-2">
                 Technology & Innovation Hub
               </p>
-              <p className="text-xs text-muted-foreground">
-                📍 Islamabad, Pakistan
+              <p className="text-xs text-muted-foreground flex items-center gap-1">
+                <span>📍</span>
+                <span>Zero Point, Islamabad, Pakistan</span>
               </p>
               <div className="mt-3 flex items-center space-x-2">
                 <motion.div
@@ -65,13 +65,28 @@ export default function LocationMap() {
                     duration: 2,
                     repeat: Number.POSITIVE_INFINITY,
                   }}
-                  className="w-2 h-2 bg-green-500 rounded-full"
+                  className="w-2 h-2 bg-green-500 rounded-full shadow-lg shadow-green-500/50"
                 />
                 <span className="text-xs text-muted-foreground">
                   We&apos;re here!
                 </span>
               </div>
             </motion.div>
+
+            {/* Interactive hover effect overlay */}
+            {/* <motion.div
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+              className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl flex items-center justify-center"
+            >
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileHover={{ scale: 1, opacity: 1 }}
+                className="bg-[#00bfff]/90 text-white px-6 py-3 rounded-full font-medium shadow-lg backdrop-blur-sm"
+              >
+                📍 View Location Details
+              </motion.div>
+            </motion.div> */}
           </div>
 
           <motion.div
@@ -79,11 +94,26 @@ export default function LocationMap() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
-            className="mt-6 text-center"
+            className="mt-6 text-center space-y-2"
           >
-            <p className="text-muted-foreground text-sm md:text-base">
-              📧 business@brentwoodglobal.com • 📞 +92 123 4567890
+            <p className="text-muted-foreground text-sm md:text-base flex items-center justify-center gap-4 flex-wrap">
+              <span className="flex items-center gap-2">
+                <span>📧</span>
+                <span>business@brentwoodglobal.com</span>
+              </span>
+              <span className="flex items-center gap-2">
+                <span>📞</span>
+                <span>+92 123 4567890</span>
+              </span>
             </p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="text-xs text-muted-foreground mt-2"
+            >
+              Office Hours: Monday - Friday, 9:00 AM - 6:00 PM PKT
+            </motion.p>
           </motion.div>
         </motion.div>
       </div>
