@@ -82,7 +82,7 @@ export default function LocationMap() {
             className="mt-6 text-center"
           >
             <p className="text-muted-foreground text-sm md:text-base">
-              📧 contact@brentwoodglobal.com • 📞 +92 123 4567890
+              📧 business@brentwoodglobal.com • 📞 +92 123 4567890
             </p>
           </motion.div>
         </motion.div>

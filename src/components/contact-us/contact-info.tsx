@@ -11,7 +11,7 @@ export default function ContactInfo() {
       title: "Email",
       value: "contact@brentwoodglobal.com",
       description: "Send us an email anytime",
-      href: "mailto:contact@brentwoodglobal.com",
+      href: "mailto:business@brentwoodglobal.com",
     },
     {
       icon: Phone,

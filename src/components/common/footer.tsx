@@ -1,16 +1,15 @@
 "use client";
-// #00f6ff
 
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import {
-  Instagram,
-  Facebook,
-  Twitter,
-  Linkedin,
-  MessageCircle,
-} from "lucide-react";
+// import {
+//   Instagram,
+//   Facebook,
+//   Twitter,
+//   Linkedin,
+//   MessageCircle,
+// } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -26,24 +25,24 @@ export default function Footer() {
       address: "Plot No, 94 Street 7, I-10/3",
     },
     {
-      flag: "🇺🇰",
+      flag: "🇬🇧",
       country: "Coventry, United Kingdom",
       address: "Plot 29, Financial Plaza, Downtown Toronto, Ontario M5H 2N2",
     },
   ];
 
-  const socialLinks = [
-    {
-      name: "Instagram",
-      icon: Instagram,
-      color: "bg-gradient-to-r from-orange-500 to-pink-500",
-      href: "#",
-    },
-    { name: "Facebook", icon: Facebook, color: "bg-blue-600", href: "#" },
-    { name: "Twitter", icon: Twitter, color: "bg-black", href: "#" },
-    { name: "Linkedin", icon: Linkedin, color: "bg-blue-700", href: "#" },
-    { name: "Medium", icon: MessageCircle, color: "bg-gray-800", href: "#" },
-  ];
+  // const socialLinks = [
+  //   {
+  //     name: "Instagram",
+  //     icon: Instagram,
+  //     color: "bg-gradient-to-r from-orange-500 to-pink-500",
+  //     href: "#",
+  //   },
+  //   { name: "Facebook", icon: Facebook, color: "bg-blue-600", href: "#" },
+  //   { name: "Twitter", icon: Twitter, color: "bg-black", href: "#" },
+  //   { name: "Linkedin", icon: Linkedin, color: "bg-blue-700", href: "#" },
+  //   { name: "Medium", icon: MessageCircle, color: "bg-gray-800", href: "#" },
+  // ];
 
   const footerLinks = [
     { name: "Terms & conditions", href: "/terms" },
