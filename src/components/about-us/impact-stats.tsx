@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Users, Calendar, Globe } from "lucide-react";
 
@@ -12,6 +12,8 @@ export function ImpactStats() {
     experience: 0,
     countries: 0,
   });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const stats = [
     {
@@ -46,6 +48,10 @@ export function ImpactStats() {
 
   useEffect(() => {
     const animateCounters = () => {
+      if (hasAnimated) return; // Prevent multiple animations
+
+      setHasAnimated(true);
+
       stats.forEach((stat) => {
         let start = 0;
         const end = stat.value;
@@ -64,24 +70,52 @@ export function ImpactStats() {
       });
     };
 
+    // Create observer with mobile-friendly settings
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          animateCounters();
-          observer.disconnect();
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            animateCounters();
+          }
+        });
       },
-      { threshold: 0.5 }
+      {
+        threshold: [0.1, 0.3, 0.5], // Multiple thresholds for better mobile detection
+        rootMargin: "0px 0px -10% 0px", // Trigger slightly before element is fully visible
+      }
     );
 
-    const element = document.getElementById("impact-stats");
-    if (element) observer.observe(element);
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
+    }
 
-    return () => observer.disconnect();
-  }, []);
+    // Fallback: trigger animation if element is already in view on mount
+    const checkInitialVisibility = () => {
+      if (currentSection && !hasAnimated) {
+        const rect = currentSection.getBoundingClientRect();
+        const windowHeight =
+          window.innerHeight || document.documentElement.clientHeight;
+
+        // Check if any part of the element is visible
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          animateCounters();
+        }
+      }
+    };
+
+    // Small delay to ensure DOM is ready
+    const timeoutId = setTimeout(checkInitialVisibility, 100);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeoutId);
+    };
+  }, [hasAnimated]);
 
   return (
     <section
+      ref={sectionRef}
       className="py-20 bg-background relative overflow-hidden"
       id="impact-stats"
     >
@@ -144,7 +178,7 @@ export function ImpactStats() {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 whileHover={{ y: -10, scale: 1.05 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-10%" }}
               >
                 <Card className="bg-background border-0 shadow-lg hover:shadow-2xl transition-all duration-300 group">
                   <CardContent className="p-8 text-center">
@@ -177,6 +211,7 @@ export function ImpactStats() {
                       initial={{ width: 0 }}
                       whileInView={{ width: "100%" }}
                       transition={{ duration: 1, delay: index * 0.2 }}
+                      viewport={{ once: true, margin: "-10%" }}
                       className="h-1 bg-gradient-to-r from-[#00f6ff] via-[#00bfff] to-[#007bff] mt-4 rounded-full"
                     />
                   </CardContent>
@@ -191,7 +226,7 @@ export function ImpactStats() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-10%" }}
           className="text-center max-w-4xl mx-auto"
         >
           <p className="text-xl text-muted-foreground leading-relaxed">
